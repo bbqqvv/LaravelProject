@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'CustomFont';
+    src: url('/path/to/font.woff2') format('woff2'),
+         url('/path/to/font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+/* Ensure the container takes up the full width with padding for visual effect */
+.container {
+     max-width: 1200px; /* Adjust max width as needed */
+     margin: 0 auto; /* Center the container */
+     padding: 20px;
+     background-color: #ffffff; /* Optional: Set a background color for contrast */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for depth */
+     border-radius: 8px; /* Optional: Rounded corners */
+     overflow: hidden; /* Ensure no content escapes the container */
+ }
+ 
+ /* Example navbar, main, and footer styles */
+ nav {
+     margin-bottom: 20px;
+ }
+ 
+ main {
+     margin-bottom: 20px;
+ }
+ 
+ footer {
+     margin-top: 20px;
+ }
+ 
