@@ -1,57 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
-    font-family: 'CustomFont';
-    src: url('/path/to/font.woff2') format('woff2'),
-         url('/path/to/font.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-.custom-title{
-     @apply  font-bold text-colorText font-barlow w-full text-3xl text-center;
-}
-.custom-cart-feature{ 
-     @apply flex flex-wrap justify-center -mx-2 mt-8 gap-5 text-center
-}
-.feature-category{
-     @apply  border-[1px] w-[10.666%] 
-}
-.product-image{
-     @apply relative
-}
-.img-wrapper{
-    @apply absolute h-6 -bottom-6 w-full bg-white font-barlow text-sm group-hover:bottom-0 hidden group-hover:block opacity-80 group-hover:transition-all group-hover:duration-300 group-hover:ease-in-out;
+     font-family: 'CustomFont';
+     src: url('/path/to/font.woff2') format('woff2'),
+          url('/path/to/font.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
 }
 
-/* .hover-img{
-     @apply 
-} */
-
-.img-second{
-     @apply hidden
+.wrapper {
+     @apply max-w-[1100px] flex ml-auto mr-auto pl-[15px] pr-[15px] mx-auto flex-row gap-4 md:block;
 }
-.owl-item{
-     
-}
-.product-name{
-     @apply text-center font-barlow font-semibold
+.collection{
+     @apply text-center font-barlow
 }
 .price-sale-sale{
-     @apply flex gap-2 justify-center
+     @apply flex gap-4 justify-center
+}
+.collection-title {
+     @apply font-bold text-colorText font-barlow w-full text-3xl text-center uppercase;
 }
 
-.custom-cart-feature{ 
-     @apply flex flex-wrap justify-center -mx-2 mt-8 gap-5 text-center
-}
-.feature-category{
-     @apply  border-[1px] w-[10.666%] 
-}
-.product-image{
+.product {
      @apply relative
 }
-.img-wrapper{
-    @apply absolute h-6 -bottom-6 w-full bg-white font-barlow text-sm group-hover:bottom-0 hidden group-hover:block opacity-80 group-hover:transition-all group-hover:duration-300 group-hover:ease-in-out;
+
+.img-first {
+     @apply w-full h-full
 }
 
+.img-second {
+     @apply absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300
+
+}
+.custom-cart-feature {
+     @apply flex flex-wrap justify-center -mx-2 mt-8 gap-5 text-center;
+}
+
+.feature-category {
+     @apply border w-[10.666%];
+}
+
+.product-image {
+     @apply relative;
+}
+
+.img-wrapper {
+     @apply absolute h-6 -bottom-6 w-full bg-white font-barlow text-sm group-hover:bottom-0 group-hover:block group-hover:transition-all hidden group-hover:duration-300 group-hover:ease-in-out;
+}
+.tag-sale{
+   @apply text-white text-base absolute h-5 w-11 flex items-center justify-center top-2.5 left-2.5 bg-red-600 z-50 font-bold 
+
+}

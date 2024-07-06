@@ -1,5 +1,5 @@
-<header class="bg-white shadow max-h-28 max-w-full">
-    <div class="max-w-[1100px] mx-auto flex flex-row gap-4 md:block">
+<header class="bg-white shadow h-auto max-w-full sticky z-50 top-0">
+    <div class="wrapper">
         <!-- Hotline -->
         <div class="top-bar flex justify-between p-1 flex-1/2">
             <div class="form-left">
