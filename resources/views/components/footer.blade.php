@@ -1,5 +1,5 @@
 <footer class="bg-white p-4 text-black rounded-md">
-    <div class="relative py-6 bg-white w-full h-auto max-w-screen-lg mx-auto">
+    <div class="relative py-6  w-full h-auto max-w-screen-lg mx-auto">
         <div class="container mx-auto">
             <div class="flex flex-col md:flex-row gap-6 md:gap-20 justify-center text-center">
                 <div class="md:w-1/3">

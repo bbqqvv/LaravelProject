@@ -1,49 +1,278 @@
 <x-layout>
 
 
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-            </a>
-            <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M1 1h15M1 7h15M1 13h15" />
-                </svg>
-            </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul
-                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                            aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-                    </li>
-                </ul>
+    <section class="hero">
+        <div class="owl-wrap-info">
+            <div class="owl-banner-info owl-carousel owl-theme">
+                <!-- Nội dung của owl-banner-info -->
             </div>
         </div>
-    </nav>
+        <div class="owl-banner owl-carousel owl-theme owl-loaded owl-drag">
+            <div class="owl-stage-outer">
+                <div class="owl-stage">
+                    <div class="owl-item" style="width: 856px;">
+                        <a href="">
+                            <img src="https://statics.pancake.vn/web-media/c1/6e/3f/b8/78f7ad395a972ba6eac89254f8163eb7f871c83da263d24404b7b301.jpg"
+                                alt="banner" class="image-banner img-responsive center-block" width="100%"
+                                height="100%">
+                        </a>
+                    </div>
+                    <div class="owl-item" style="width: 856px;">
+                        <a href="">
+                            <img src="https://statics.pancake.vn/web-media/c1/6e/3f/b8/78f7ad395a972ba6eac89254f8163eb7f871c83da263d24404b7b301.jpg"
+                                alt="banner" class="image-banner img-responsive center-block" width="100%"
+                                height="100%">
+                        </a>
+                    </div>
+                    <div class="owl-item" style="width: 856px;">
+                        <a href="">
+                            <img src="https://statics.pancake.vn/web-media/c1/6e/3f/b8/78f7ad395a972ba6eac89254f8163eb7f871c83da263d24404b7b301.jpg"
+                                alt="banner" class="image-banner img-responsive center-block" width="100%"
+                                height="100%">
+                        </a>
+                    </div>
+                    <div class="owl-item" style="width: 856px;">
+                        <a href="">
+                            <img src="https://statics.pancake.vn/web-media/c1/6e/3f/b8/78f7ad395a972ba6eac89254f8163eb7f871c83da263d24404b7b301.jpg"
+                                alt="banner" class="image-banner img-responsive center-block" width="100%"
+                                height="100%">
+                        </a>
+                    </div>
+                    <div class="owl-item" style="width: 856px;">
+                        <a href="">
+                            <img src="https://statics.pancake.vn/web-media/c1/6e/3f/b8/78f7ad395a972ba6eac89254f8163eb7f871c83da263d24404b7b301.jpg"
+                                alt="banner" class="image-banner img-responsive center-block" width="100%"
+                                height="100%">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.owl-banner').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                items: 1, // Số lượng phần tử hiển thị trong một lần cuộn
+                autoplay: true, // Tự động cuộn
+                autoplayTimeout: 5000, // Thời gian chờ giữa các lần cuộn (ms)
+                autoplayHoverPause: true, // Tạm dừng khi di chuột qua
+                navText: ["‹", "›"], // Nội dung của các nút "Previous" và "Next"
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+        });
+    </script>
+
+
+    <div class="main">
+        <div class="wrapper">
+            <div class="container">
+                <!-- Start featured collection -->
+                <section class="featured-collections">
+                    <div class="container">
+                        <div
+                            class="collection-title-owl font-bold text-colorText font-barlow w-full text-3xl text-center">
+                            DANH MỤC NỔI BẬT
+                        </div>
+                        <div class="row collection-row space-x-6 max-w-[1100px] mx-auto flex flex-row pt-5 text-center">
+                            <div class="col xs-8 sm-12 lg-4 item">
+                                <div class="product">
+                                    <div class="product-image">
+                                        <a class="product-image-img" href="/categories/so-mi">
+                                            <img src="https://statics.pancake.vn/web-media/ff/69/57/7b/807ff961cbc747d66525c56387f307f114431cd8e733f30f5e2a7de7.jpg"
+                                                data-lazyload="https://statics.pancake.vn/web-media/ff/69/57/7b/807ff961cbc747d66525c56387f307f114431cd8e733f30f5e2a7de7.jpg"
+                                                class="w-full h-auto object-cover lazy img-responsive center-block img-first">
+                                            {{-- <img src="https://statics.pancake.vn/web-media/ff/69/57/7b/807ff961cbc747d66525c56387f307f114431cd8e733f30f5e2a7de7.jpg"
+                                                    data-lazyload="https://statics.pancake.vn/web-media/ff/69/57/7b/807ff961cbc747d66525c56387f307f114431cd8e733f30f5e2a7de7.jpg"
+                                                    class="lazy img-responsive center-block img-second"> --}}
+                                        </a>
+                                        <div class="img-wrapper">
+                                            <a href="/categories/so-mi" class="hover-img">
+                                                <span>Xem Ngay</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-name">
+                                            <a style="color: #06283d" href="/categories/so-mi" class="font-bold">Sơ
+                                                mi</a>
+                                        </div>
+                                        <div class="product-name" style="font-weight: 400">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col xs-8 sm-12 lg-4 item max-w-[50%]">
+                                <div class="product">
+                                    <div class="product-image">
+                                        <a class="product-image-img" href="/categories/ao-polo">
+                                            <img src="https://statics.pancake.vn/web-media/57/13/69/02/d3caf34bfb778fec405c39e4a883588589acc3bf8769d0d30caedd58.jpg"
+                                                data-lazyload="https://statics.pancake.vn/web-media/57/13/69/02/d3caf34bfb778fec405c39e4a883588589acc3bf8769d0d30caedd58.jpg"
+                                                class="w-full h-auto object-cover lazy img-responsive center-block img-first">
+                                            {{-- <img src="https://statics.pancake.vn/web-media/57/13/69/02/d3caf34bfb778fec405c39e4a883588589acc3bf8769d0d30caedd58.jpg"
+                                                    data-lazyload="https://statics.pancake.vn/web-media/57/13/69/02/d3caf34bfb778fec405c39e4a883588589acc3bf8769d0d30caedd58.jpg"
+                                                    class="lazy img-responsive center-block img-second"> --}}
+                                        </a>
+                                        <div class="img-wrapper">
+                                            <a href="/categories/ao-polo" class="hover-img">
+                                                <span>Xem Ngay</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-name">
+                                            <a style="color: #06283d" href="/categories/ao-polo" class="font-bold">Áo
+                                                polo</a>
+                                        </div>
+                                        <div class="product-name" style="font-weight: 400">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col xs-8 sm-12 lg-4 item max-w-[50%]">
+                                <div class="product">
+                                    <div class="product-image">
+                                        <a class="product-image-img" href="/categories/ao-phong">
+                                            <img src="https://statics.pancake.vn/web-media/f1/90/b4/be/41cf0d74d4fd665f7b822f9b9fdf08736844945aab4211b005c47c3a.jpg"
+                                                data-lazyload="https://statics.pancake.vn/web-media/f1/90/b4/be/41cf0d74d4fd665f7b822f9b9fdf08736844945aab4211b005c47c3a.jpg"
+                                                class="w-full lazy img-responsive center-block img-first">
+                                            {{-- <img src="https://statics.pancake.vn/web-media/f1/90/b4/be/41cf0d74d4fd665f7b822f9b9fdf08736844945aab4211b005c47c3a.jpg"
+                                                    data-lazyload="https://statics.pancake.vn/web-media/f1/90/b4/be/41cf0d74d4fd665f7b822f9b9fdf08736844945aab4211b005c47c3a.jpg"
+                                                    class="lazy img-responsive center-block img-second"> --}}
+                                        </a>
+                                        <div class="img-wrapper">
+                                            <a href="/categories/ao-phong" class="hover-img">
+                                                <span>Xem Ngay</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-name">
+                                            <a style="color: #06283d" href="/categories/ao-phong"
+                                                class="font-bold">Áo phông</a>
+                                        </div>
+                                        <div class="product-name" style="font-weight: 400">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col xs-8 sm-12 lg-4 item">
+                                <div class="product">
+                                    <div class="product-image">
+                                        <a class="product-image-img" href="/categories/quan">
+                                            <img src="https://statics.pancake.vn/web-media/2d/15/fa/ba/eced24d90f3f96cb7482692c6426f37adda8cc4c94fd39a681ab2ef9.jpg"
+                                                data-lazyload="https://statics.pancake.vn/web-media/2d/15/fa/ba/eced24d90f3f96cb7482692c6426f37adda8cc4c94fd39a681ab2ef9.jpg"
+                                                class="object-fill lazy img-responsive center-block img-first">
+                                            {{-- <img src="https://statics.pancake.vn/web-media/2d/15/fa/ba/eced24d90f3f96cb7482692c6426f37adda8cc4c94fd39a681ab2ef9.jpg"
+                                                    data-lazyload="https://statics.pancake.vn/web-media/2d/15/fa/ba/eced24d90f3f96cb7482692c6426f37adda8cc4c94fd39a681ab2ef9.jpg"
+                                                    class="lazy img-responsive center-block img-second"> --}}
+                                        </a>
+                                        <div class="img-wrapper">
+                                            <a href="/categories/quan" class="hover-img">
+                                                <span>Xem Ngay</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-name">
+                                            <a style="color: #06283d" href="/categories/quan"
+                                                class="font-bold">Quần</a>
+                                        </div>
+                                        <div class="product-name" style="font-weight: 400">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col xs-8 sm-12 lg-4 item max-w-[50%]">
+                                <div class="product">
+                                    <div class="product-image">
+                                        <a class="product-image-img" href="/categories/ao-khoac">
+                                            <img src="https://statics.pancake.vn/web-media/73/36/74/6f/8679395c8185239968808f0e5cbb214cba7af916a839c462ec10db17.jpg"
+                                                data-lazyload="https://statics.pancake.vn/web-media/73/36/74/6f/8679395c8185239968808f0e5cbb214cba7af916a839c462ec10db17.jpg"
+                                                class="w-full h-auto object-cover lazy img-responsive center-block img-first">
+                                            {{-- <img src="https://statics.pancake.vn/web-media/73/36/74/6f/8679395c8185239968808f0e5cbb214cba7af916a839c462ec10db17.jpg"
+                                                    data-lazyload="https://statics.pancake.vn/web-media/73/36/74/6f/8679395c8185239968808f0e5cbb214cba7af916a839c462ec10db17.jpg"
+                                                    class="lazy img-responsive center-block img-second"> --}}
+                                        </a>
+                                        <div class="img-wrapper">
+                                            <a href="/categories/ao-khoac" class="hover-img">
+                                                <span>Xem Ngay</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-name">
+                                            <a style="color: #06283d" href="/categories/ao-khoac"
+                                                class="font-bold">Áo khoác</a>
+                                        </div>
+                                        <div class="product-name" style="font-weight: 400">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col xs-8 sm-12 lg-4 item max-w-[50%]">
+                                <div class="product">
+                                    <div class="product-image">
+                                        <a class="product-image-img" href="/categories/giay-andamp-dep">
+                                            <img src="https://statics.pancake.vn/web-media/b0/ba/a2/a6/7bef877512e4c01bc4a99f978dcc44a879cc094f089222542d06f9bb.jpg"
+                                                data-lazyload="https://statics.pancake.vn/web-media/b0/ba/a2/a6/7bef877512e4c01bc4a99f978dcc44a879cc094f089222542d06f9bb.jpg"
+                                                class="w-full h-full object-cover lazy img-responsive center-block img-first">
+                                            {{-- <img src="https://statics.pancake.vn/web-media/b0/ba/a2/a6/7bef877512e4c01bc4a99f978dcc44a879cc094f089222542d06f9bb.jpg"
+                                                    data-lazyload="https://statics.pancake.vn/web-media/b0/ba/a2/a6/7bef877512e4c01bc4a99f978dcc44a879cc094f089222542d06f9bb.jpg"
+                                                    class="lazy img-responsive center-block img-second"> --}}
+                                        </a>
+                                        <div class="img-wrapper">
+                                            <a href="/categories/giay-andamp-dep" class="hover-img">
+                                                <span>Xem Ngay</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-name">
+                                            <a style="color: #06283d" href="/categories/giay-andamp-dep"
+                                                class="font-bold">Giày &amp;
+                                                Dép</a>
+                                        </div>
+                                        <div class="product-name" style="font-weight: 400">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End featured collection -->
+            </div>
+        </div>
+    </div>
 
 </x-layout>

@@ -1,6 +1,6 @@
 <x-layout class="absolute">
     <x-header><a href=""><b>Trang chủ</b></a>><a href="login"><b>Đăng nhập</b></a></x-header>
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-cente h-[30rem] mt-6">
         <div class="max-w-md w-full md:w-[28rem] p-4">
             <form method="POST" action="{{ route('login.store') }}">
                 @csrf

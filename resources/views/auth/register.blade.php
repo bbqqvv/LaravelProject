@@ -7,19 +7,11 @@
                 <div class="account-form">
                     <h3 class="font-barlow font-bold text-center text-lg mb-4">Đăng ký tài khoản</h3>
                     <div class="form-item flex flex-col mb-4">
-                        <label class="mb-2 font-barlow text-[0.9rem]">Họ</label>
+                        <label class="mb-2 font-barlow text-[0.9rem]">Họ và Tên</label>
                         <input class="w-full p-2 border border-gray-300 rounded" placeholder="Họ..." type="text"
-                            name="customer[first_name]" value="" required>
-                        @error('customer.first_name')
+                            name="name" value="" required>
+                        @error('name')
                             <span class="text-red-500 mt-2">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <div class="form-item flex flex-col mb-4">
-                        <label class="mb-2 font-barlow text-[0.9rem]">Tên</label>
-                        <input class="w-full p-2 border border-gray-300 rounded" placeholder="Tên..." type="text"
-                            name="customer[last_name]" value="" required>
-                        @error('customer.last_name')
-                            <span class="text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-item flex flex-col mb-4">
@@ -48,5 +40,4 @@
             </form>
         </div>
     </div>
-    
 </x-layout>
