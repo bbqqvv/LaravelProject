@@ -8,5 +8,50 @@
     font-weight: normal;
     font-style: normal;
   }
-  
+
+.custom-title{
+     @apply  font-bold text-colorText font-barlow w-full text-3xl text-center;
+}
+.custom-cart-feature{ 
+     @apply flex flex-wrap justify-center -mx-2 mt-8 gap-5 text-center
+}
+.feature-category{
+     @apply  border-[1px] w-[10.666%] 
+}
+.product-image{
+     @apply relative
+}
+.img-wrapper{
+    @apply absolute h-6 -bottom-6 w-full bg-white font-barlow text-sm group-hover:bottom-0 hidden group-hover:block opacity-80 group-hover:transition-all group-hover:duration-300 group-hover:ease-in-out;
+}
+
+/* .hover-img{
+     @apply 
+} */
+
+.img-second{
+     @apply hidden
+}
+.owl-item{
+     
+}
+.product-name{
+     @apply text-center font-barlow font-semibold
+}
+.price-sale-sale{
+     @apply flex gap-2 justify-center
+}
+
+.custom-cart-feature{ 
+     @apply flex flex-wrap justify-center -mx-2 mt-8 gap-5 text-center
+}
+.feature-category{
+     @apply  border-[1px] w-[10.666%] 
+}
+.product-image{
+     @apply relative
+}
+.img-wrapper{
+    @apply absolute h-6 -bottom-6 w-full bg-white font-barlow text-sm group-hover:bottom-0 hidden group-hover:block opacity-80 group-hover:transition-all group-hover:duration-300 group-hover:ease-in-out;
+}
 
