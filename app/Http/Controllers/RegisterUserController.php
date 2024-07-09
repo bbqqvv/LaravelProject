@@ -30,6 +30,6 @@ class RegisterUserController extends Controller
         // Log the user in...
         auth()->login($user);
         // Redirect to the posts index...
-        return to_route('posts.index');
+        return to_route('home');
     }
 }

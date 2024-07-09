@@ -20,12 +20,24 @@
                     </button>
                 </form>
                 <div class="hidden md:flex space-x-3">
-                    <a href=" {{ route('login') }} " class="text-black flex items-center text-sm font-medium">
-                        <i class="fa fa-sign-in mr-1" aria-hidden="true"></i> Đăng nhập
-                    </a>
-                    <a href="{{ route('register') }}" class="text-black flex items-center text-sm font-medium">
-                        <i class="fa fa-user-plus mr-1" aria-hidden="true"></i> Đăng kí
-                    </a>
+
+                    @guest
+                        <x-navbar-link class="text-black flex items-center text-sm font-medium" href="{{ route('login') }}"
+                            :active="request()->is('login')"> <i class="fa fa-sign-in mr-1" aria-hidden="true"></i> Đăng
+                            nhập</x-navbar-link>
+                        <x-navbar-link class="text-black flex items-center text-sm font-medium"
+                            href="{{ route('register') }}" :active="request()->is('register')"> <i class="fa fa-user-plus mr-1"
+                                aria-hidden="true"></i> Đăng
+                            kí</x-navbar-link>
+                    @endguest
+                    @auth
+                        <x-navbar-link class="text-black flex items-center text-sm font-medium" href="{{ route('logout') }}"
+                            :active="request()->is('logout')"> <i class="fa fa-sign-in mr-1" aria-hidden="true"></i> Đăng
+                            xuất</x-navbar-link>
+                    @endauth
+
+
+
                 </div>
             </div>
         </div>
@@ -41,12 +53,23 @@
                         class="max-h-[60px]" alt="logo Cheapstore">
                 </a>
             </div>
-            <div class="cart-box relative md:block hidden">
-                <a href="/cart" class="text-black flex items-center">
-                    <i class="fa fa-cart-arrow-down text-xl"></i>
-                    <span
-                        class="bg-black text-white rounded-full w-5 h-5 flex items-center justify-center mb-6">0</span>
-                </a>
+            <div class="nav-b-right flex items-center space-x-5">
+                {{-- Giỏ hàng --}}
+                <div class="cart-box relative md:block hidden">
+                    <a href="#" class="text-black flex items-center open-cart">
+                        <i class="fa fa-cart-arrow-down text-xl"></i>
+                        <span
+                            class="bg-black text-white rounded-full w-5 h-5 flex items-center justify-center mb-6 cart-count">0</span>
+                    </a>
+                </div>
+                @auth
+                    <div class="account-box flex flex-col items-center">
+                        <a href="#" class="text-black flex flex-col items-center open-cart">
+                            <i class="fa-solid fa-user "></i>
+                            <span class="text-[0.8rem] font-semibold">Bui Quoc Van</span>
+                        </a>
+                    </div>
+                @endauth
             </div>
         </div>
     </div>
@@ -122,6 +145,7 @@
         }
     });
 </script>
+
 
 {{-- 
    {{-- <div class="hidden w-full md:block md:w-auto" id="navbar-default">

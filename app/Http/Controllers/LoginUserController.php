@@ -22,7 +22,7 @@ class LoginUserController extends Controller
         // Attempt to log the user in
         if (Auth::guard('web')->attempt(['email' => $request->email, 'password' => $request->password])) {
             // if successful, then redirect to their intended location
-            return redirect()->intended(route('posts.index'));
+            return redirect()->intended(route('home'));
         } else {
             // if unsuccessful, then redirect back to the login with the form data
             return back()->withErrors([
@@ -36,6 +36,6 @@ class LoginUserController extends Controller
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return to_route('posts.index');
+        return to_route('home');
     }
 }

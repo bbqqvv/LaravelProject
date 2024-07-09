@@ -18,7 +18,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->can('update', 'post')->name('posts.edit');
     Route::put('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
     Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
-    Route::post('/logout', [LoginUserController::class, 'logout'])->name('logout');
+    Route::get('/logout', [LoginUserController::class, 'logout'])->name('logout');
 
     Route::middleware('is-admin')->group(function () {
         Route::get('/admin', [AdminController::class, 'index'])->name('admin');

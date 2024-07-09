@@ -10,24 +10,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    {{-- cloudzoom --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cloud-zoom/1.0.2/cloudzoom.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cloud-zoom/1.0.2/cloudzoom.min.js"></script>
-
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
+    <!-- Include jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Include Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Include Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Include CloudZoom -->
+    <script type="text/javascript" src="cloud-zoom.js"></script>
+    <link rel="stylesheet" href="cloud-zoom.css" type="text/css">
 
     @vite('resources/css/app.css')
 </head>
+
 
 <body class=" bg-slate-100 dark:bg-slate-800">
     <div class="relative">
@@ -42,7 +45,9 @@
             {{ $slot }}
         </div>
     </div>
+
     <x-footer />
+
 
 
 </body>

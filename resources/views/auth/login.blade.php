@@ -22,16 +22,16 @@
                     <div class="form-item flex flex-col mb-4">
                         <label class="mb-2 font-barlow text-[0.9rem]">Email</label>
                         <input class="w-full p-2 border border-gray-300 rounded" placeholder="Email..." type="email"
-                            aria-describedby="emailHelp" name="customer[email]" value="" required>
-                        @error('customer.email')
+                            aria-describedby="emailHelp" name="email" value="" required>
+                        @error('email')
                             <span class="text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-item flex flex-col mb-4">
                         <label class="mb-2 font-barlow text-[0.9rem]">Mật khẩu</label>
                         <input class="w-full p-2 border border-gray-300 rounded" type="password" placeholder="Mật khẩu"
-                            name="customer[password]" value="" required>
-                        @error('customer.password')
+                            name="password" value="" required>
+                        @error('password')
                             <span class="text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
