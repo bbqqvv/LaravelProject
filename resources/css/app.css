@@ -1,36 +1,148 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-    font-family: 'CustomFont';
-    src: url('/path/to/font.woff2') format('woff2'),
-         url('/path/to/font.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
 
-/* Ensure the container takes up the full width with padding for visual effect */
-.container {
-     max-width: 1200px; /* Adjust max width as needed */
-     margin: 0 auto; /* Center the container */
-     padding: 20px;
-     background-color: #ffffff; /* Optional: Set a background color for contrast */
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for depth */
-     border-radius: 8px; /* Optional: Rounded corners */
-     overflow: hidden; /* Ensure no content escapes the container */
+@font-face {
+     font-family: 'CustomFont';
+     src: url('/path/to/font.woff2') format('woff2'),
+          url('/path/to/font.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+.wrapper {
+     @apply max-w-[1100px] flex ml-auto mr-auto pl-[15px] pr-[15px] mx-auto flex-row gap-4 md:block;
+}
+
+.collection {
+     @apply text-center font-barlow
+}
+
+.price-sale-sale {
+     @apply flex gap-4 justify-center
+}
+
+.collection-title {
+     @apply font-bold text-colorText font-barlow w-full text-3xl text-center uppercase;
+}
+
+.product {
+     @apply relative bg-white overflow-hidden border
+}
+
+.img-first {
+     @apply w-full h-full
+}
+
+.img-second {
+     @apply absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300
+}
+
+.custom-cart-feature {
+     @apply flex flex-wrap justify-center -mx-2 mt-8 gap-5 text-center;
+}
+
+.feature-category {
+     @apply border w-[10.666%];
+}
+
+.product-image {
+     @apply relative;
+}
+
+.img-wrapper {
+     @apply absolute h-6 -bottom-6 w-full bg-white font-barlow text-sm group-hover:bottom-0 group-hover:block group-hover:transition-all hidden group-hover:duration-300 group-hover:ease-in-out;
+}
+
+.tag-sale {
+     @apply text-white text-base absolute h-5 w-11 flex items-center justify-center top-2.5 left-2.5 bg-red-600 z-50 font-bold
+}
+
+
+
+
+/* categoryleft */
+.category {
+     @apply flex gap-6 mt-4
+}
+
+.category-left {
+     @apply border p-3 h-min
+}
+
+.category-right {
+     @apply border
+}
+
+.bor-b {
+     @apply border-b-[1px] pt-2 pb-5
+}
+
+.pancake-ui-filter {
+     @apply pt-5
+}
+
+.price-pancake {
+     @apply space-y-3 pt-4
+}
+
+
+/* categoryright */
+.category-right {
+     @apply pl-[20px] w-[79%] flex-1
+}
+
+.filter-content {
+     @apply justify-between pt-4
+}
+
+.select-selected {
+     @apply text-white px-2.5 py-1 border border-white cursor-pointer select-none
+}
+
+.wrapper-filter-mobile {
+     @apply justify-between pt-2 hidden
+}
+
+.is-flex {
+     @apply mt-2.5 flex justify-between
+}
+
+.category-grid {
+     @apply mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center font-barlow pb-[4.8rem]
+}
+
+.product-name {
+     @apply font-bold
+}
+
+.product-right {
+     @apply pl-[18px] pr-[18px]
+}
+
+.title-product-detail {
+     @apply text-[1.1rem]  
+}
+
+.valueChild {
+     @apply border cursor-pointer w-auto h-auto pl-1 pr-1 text-[1.1rem] pl-4 pr-4 
+}
+
+.valueChild.active {
+     @apply border-[#5986BD] bg-[#1D2C3F] text-white
+}
+
+/* .image-list{
+     @apply w-[5rem] m-2 space-y-2
+} */
+.image-list-big{
+     @apply w-[80%] p-2
+}
+.vertical-slider .item img {
+     @apply w-[5rem] m-2 space-y-2
+
  }
  
- /* Example navbar, main, and footer styles */
- nav {
-     margin-bottom: 20px;
- }
- 
- main {
-     margin-bottom: 20px;
- }
- 
- footer {
-     margin-top: 20px;
- }
- 
+/* .item{
+     @apply w-10
+} */
