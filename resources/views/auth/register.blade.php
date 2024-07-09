@@ -1,5 +1,18 @@
 <x-layout class="absolute">
-    <x-header><a href=""><b>Trang chủ</b></a>><a href="register"><b>Đăng ký</b></a></x-header>
+    <x-header>
+        <a href="{{ route('home') }}"><b>Trang chủ</b></a> >
+
+        @php
+            $segments = explode('/', basename(request()->path()));
+            $currentPath = '';
+
+            foreach ($segments as $segment) {
+                $currentPath .= '/' . $segment;
+                echo '<a href="register' . url($currentPath) . '"><b>' . ucfirst($segment) . '</b></a>';
+            }
+        @endphp
+    </x-header>
+
     <div class="flex justify-center items-center">
         <div class="max-w-md w-full md:w-[28rem] p-4">
             <form method="POST" action="{{ route('register.store') }}">
@@ -34,7 +47,8 @@
                         <button type="submit"
                             class="bg-colorBtn w-[6.5rem] font-bold text-white py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 hover:bg-customHoverColor">Đăng
                             ký</button>
-                        <span class="block mt-2">Đã có tài khoản?<a href="/customer/login" class="text-blue-600"> Đăng nhập!</a></span>
+                        <span class="block mt-2">Đã có tài khoản?<a href="/customer/login" class="text-blue-600"> Đăng
+                                nhập!</a></span>
                     </div>
                 </div>
             </form>

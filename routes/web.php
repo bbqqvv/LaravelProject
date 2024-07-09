@@ -3,11 +3,15 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminPostCntroller;
 use App\Http\Controllers\LoginUserController;
-use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisterUserController;
+use App\Http\Controllers\ListCategoriesController;
+use App\Http\Controllers\DetailProductsController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome');
+Route::get('/', function () {
+    return view('welcome');
+})->name('home');
+
 Route::middleware('auth')->group(function () {
     Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
     Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
@@ -25,6 +29,10 @@ Route::middleware('auth')->group(function () {
 });
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/categories/{category}', [ListCategoriesController::class, 'show'])->name('categories.show');
+Route::get('/products/{product}', [DetailProductsController::class, 'show'])->name('product.show');
+
+// Route::get('/products/', [DetailCategoriesController::class, 'show_products'])->name('products');
 
 Route::middleware('guest')->group(function () {
     Route::get('/customer/register', [RegisterUserController::class, 'register'])->name('register');

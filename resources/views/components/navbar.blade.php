@@ -13,16 +13,17 @@
             <!-- Search Bar -->
             <div class="form-right flex space-x-3 items-center">
                 <form class="relative">
-                    <input name="q" type="text" autocomplete="off" class="w-[18rem] border border-black rounded-sm h-7 hidden md:block">
+                    <input name="q" type="text" autocomplete="off"
+                        class="w-[18rem] border border-black rounded-sm h-7 hidden md:block">
                     <button id="search-big" type="button" class="absolute top-0 right-0">
                         <i class="fa fa-search text-gray-500 mr-2 mt-1" aria-hidden="true"></i>
                     </button>
                 </form>
                 <div class="hidden md:flex space-x-3">
-                    <a href="/customer/login" class="text-black flex items-center text-sm font-medium">
+                    <a href=" {{ route('login') }} " class="text-black flex items-center text-sm font-medium">
                         <i class="fa fa-sign-in mr-1" aria-hidden="true"></i> Đăng nhập
                     </a>
-                    <a href="/customer/register" class="text-black flex items-center text-sm font-medium">
+                    <a href="{{ route('register') }}" class="text-black flex items-center text-sm font-medium">
                         <i class="fa fa-user-plus mr-1" aria-hidden="true"></i> Đăng kí
                     </a>
                 </div>
@@ -43,7 +44,8 @@
             <div class="cart-box relative md:block hidden">
                 <a href="/cart" class="text-black flex items-center">
                     <i class="fa fa-cart-arrow-down text-xl"></i>
-                    <span class="bg-black text-white rounded-full w-5 h-5 flex items-center justify-center mb-6">0</span>
+                    <span
+                        class="bg-black text-white rounded-full w-5 h-5 flex items-center justify-center mb-6">0</span>
                 </a>
             </div>
         </div>
@@ -61,7 +63,7 @@
 </header>
 
 <script>
-    document.getElementById('menu-toggle').addEventListener('click', function () {
+    document.getElementById('menu-toggle').addEventListener('click', function() {
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenu.classList.toggle('hidden');
     });

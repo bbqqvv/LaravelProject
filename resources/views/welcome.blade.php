@@ -49,11 +49,11 @@
     </section>
 
 
-
-
     <div class="main mt-6">
         <div class="wrapper">
             <div class="container justify-center mx-auto">
+
+
                 <!-- Start featured collection -->
                 <section class="featured-collections">
                     <div class="container">
@@ -64,7 +64,7 @@
                             <div class="feature-category group">
                                 <div class="product">
                                     <div class="product-image">
-                                        <a class="product-image-img" href="/categories/so-mi">
+                                        <a class="product-image-img" href="{{ route('categories.show', ['category' => 'so-mi']) }}">
                                             <img src="https://statics.pancake.vn/web-media/ff/69/57/7b/807ff961cbc747d66525c56387f307f114431cd8e733f30f5e2a7de7.jpg"
                                                 data-lazyload="https://statics.pancake.vn/web-media/ff/69/57/7b/807ff961cbc747d66525c56387f307f114431cd8e733f30f5e2a7de7.jpg"
                                                 class="">
@@ -73,14 +73,14 @@
                                                     class="lazy img-responsive center-block img-second"> --}}
                                         </a>
                                         <div class="img-wrapper">
-                                            <a href="/categories/so-mi" class="hover-img">
+                                            <a href="" class="hover-img">
                                                 <span>Xem Ngay</span>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="product-content">
                                         <div class="product-name">
-                                            <a href="/categories/so-mi" class="font-bold">Sơ
+                                            <a href="{{ route('categories.show', ['category' => 'so-mi']) }}" class="font-bold">Sơ
                                                 mi</a>
                                         </div>
                                         <div class="product-name">
@@ -94,7 +94,7 @@
                             <div class="feature-category group">
                                 <div class="product">
                                     <div class="product-image">
-                                        <a class="product-image-img" href="/categories/ao-polo">
+                                        <a class="product-image-img" href="">
                                             <img src="https://statics.pancake.vn/web-media/57/13/69/02/d3caf34bfb778fec405c39e4a883588589acc3bf8769d0d30caedd58.jpg"
                                                 data-lazyload="https://statics.pancake.vn/web-media/57/13/69/02/d3caf34bfb778fec405c39e4a883588589acc3bf8769d0d30caedd58.jpg"
                                                 class="">
@@ -103,14 +103,14 @@
                                                     class="lazy img-responsive center-block img-second"> --}}
                                         </a>
                                         <div class="img-wrapper">
-                                            <a href="/categories/ao-polo" class="hover-img">
+                                            <a href="" class="hover-img">
                                                 <span>Xem Ngay</span>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="product-content">
                                         <div class="product-name">
-                                            <a href="/categories/ao-polo" class="font-bold">Áo
+                                            <a href="" class="font-bold">Áo
                                                 polo</a>
                                         </div>
                                         <div class="product-name">
@@ -119,6 +119,7 @@
                                 </div>
                             </div>
 
+                            
                             <div class="feature-category group">
                                 <div class="product">
                                     <div class="product-image">
@@ -145,6 +146,7 @@
                                     </div>
                                 </div>
                             </div>
+
 
                             <div class="feature-category group">
                                 <div class="product">
