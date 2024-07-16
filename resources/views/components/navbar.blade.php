@@ -1,4 +1,4 @@
-<header class="bg-white shadow h-auto max-w-full sticky z-50 top-0">
+<header class="bg-white shadow h-auto max-w-full sticky z-20 top-0">
     <div class="wrapper">
         <!-- Hotline -->
         <div class="top-bar flex justify-between p-1 flex-1/2">
@@ -19,6 +19,22 @@
                         <i class="fa fa-search text-gray-500 mr-2 mt-1" aria-hidden="true"></i>
                     </button>
                 </form>
+
+                <script>
+                    document.getElementById('search-big').addEventListener('click', function() {
+                        const query = document.querySelector('input[name="q"]').value;
+                        window.location.href = '/search?q=' + encodeURIComponent(query);
+                    });
+
+                    document.querySelector('input[name="q"]').addEventListener('keyup', function(e) {
+                        if (e.keyCode === 13) {
+                            const query = e.target.value;
+                            window.location.href = '/search?q=' + encodeURIComponent(query);
+                        }
+                    });
+                </script>
+
+
                 <div class="hidden md:flex space-x-3">
 
                     @guest
@@ -55,18 +71,11 @@
             </div>
             <div class="nav-b-right flex items-center space-x-5">
                 {{-- Giỏ hàng --}}
-                <div class="cart-box relative md:block hidden">
-                    <a href="#" class="text-black flex items-center open-cart">
-                        <i class="fa fa-cart-arrow-down text-xl"></i>
-                        <span
-                            class="bg-black text-white rounded-full w-5 h-5 flex items-center justify-center mb-6 cart-count">0</span>
-                    </a>
-                </div>
                 @auth
                     <div class="account-box flex flex-col items-center">
                         <a href="#" class="text-black flex flex-col items-center open-cart">
                             <i class="fa-solid fa-user "></i>
-                            <span class="text-[0.8rem] font-semibold">Bui Quoc Van</span>
+                            <span class="text-[0.8rem] text-red-600 font-semibold">{{ Auth::user()->name }}</span>
                         </a>
                     </div>
                 @endauth

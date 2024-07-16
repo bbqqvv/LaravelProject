@@ -23,7 +23,15 @@
 }
 
 .collection-title {
-     @apply font-bold text-colorText font-barlow w-full text-3xl text-center uppercase;
+     @apply font-bold text-colorText font-barlow w-full text-3xl text-center uppercase relative flex items-center justify-center my-4;
+}
+
+.dash-collection {
+     @apply bg-colorbg px-2 z-10;
+}
+
+.line-text {
+     @apply absolute inset-0 border-b border-gray-300 w-full transform -translate-y-1/2
 }
 
 .product {
@@ -71,7 +79,7 @@
 }
 
 .category-right {
-     @apply border
+     @apply border pr-5
 }
 
 .bor-b {
@@ -89,7 +97,8 @@
 .product-sale-original-price {
      @apply line-through text-gray-500
 }
-.product-sale-price{
+
+.product-sale-price {
      @apply font-semibold text-red-600
 }
 

@@ -1,4 +1,6 @@
 <x-layout>
+    @include('partials._scroll_to_top')
+
     <x-header>
         <a href="{{ route('home') }}"><b>Trang chủ</b></a> >
 
@@ -132,7 +134,7 @@
 
                                 <div class="price-product-sale-sale flex space-x-3">
                                     <div
-                                        class="product-product-sale-original-price text-2xl font-barlow text-colorText">
+                                        class="product-sale-original-price text-2xl font-barlow text-colorText">
                                         280.000đ</div>
                                     <div class="product-product-sale-price text-[#5986BD] text-2xl font-semibold">
                                         199.000đ</div>
@@ -242,17 +244,18 @@
 
                             </div>
                             <hr>
-                            <div class="product-call-to-action mt-5">
+                            <div class="product-call-to-action mt-5 flex">
                                 <input type="hidden" name="return_url" value="/cart">
                                 <button
                                     class="default-btn btn-contract font-bold bg-[#5986BD] text-white w-[30%] h-[2rem] rounded-md"
                                     type="submit" name="checkout">
                                     <i class="fa fa-shopping-cart " aria-hidden="true"></i> Mua ngay
                                 </button>
-                                <button type="submit" name="submit" id="add-to-cart"
+                                    @include('partials._add_to_cart')
+                                {{-- <button type="submit" name="submit" id="add-to-cart"
                                     class="default-btn btn-primary font-bold bg-[#1D2C3F] text-white w-[40%] h-[2rem] rounded-md">
                                     <i class="fa fa-shopping-bag " aria-hidden="true"></i> Thêm vào giỏ
-                                </button>
+                                </button> --}}
                             </div>
                         </div>
                     </div>

@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
-// php artisan make:controller AdminPostController
+
 class AdminController extends Controller
 {
-    //
+    public function index()
+    {
+
+        return view('admin.index');
+    }
 }

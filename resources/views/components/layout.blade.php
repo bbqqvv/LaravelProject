@@ -28,11 +28,19 @@
     <script type="text/javascript" src="cloud-zoom.js"></script>
     <link rel="stylesheet" href="cloud-zoom.css" type="text/css">
 
-    @vite('resources/css/app.css')
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- Include Dashboard -->
+
+    
+
+    @stack('css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 
 <body class=" bg-slate-100 dark:bg-slate-800">
+
     <div class="relative">
         <x-navbar />
         @if (session('message'))
@@ -47,8 +55,6 @@
     </div>
 
     <x-footer />
-
-
 
 </body>
 
