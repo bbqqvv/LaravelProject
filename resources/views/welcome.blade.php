@@ -1,4 +1,6 @@
 <x-layout>
+    @include('partials._scroll_to_top')
+    @include('components.cart-flash')
     <section class="hero">
         <div class="owl-wrap-info">
             <div class="owl-banner-info owl-carousel owl-theme">
@@ -49,8 +51,8 @@
     </section>
 
 
-    <div class="main mt-6">
-        <div class="wrapper">
+    <div class="main mt-6 ">
+        <div class="wrapper z-30">
             <div class="container justify-center mx-auto">
 
 
@@ -64,7 +66,8 @@
                             <div class="feature-category group">
                                 <div class="product">
                                     <div class="product-image">
-                                        <a class="product-image-img" href="{{ route('categories.show', ['category' => 'so-mi']) }}">
+                                        <a class="product-image-img"
+                                            href="{{ route('categories.show', ['category' => 'so-mi']) }}">
                                             <img src="https://statics.pancake.vn/web-media/ff/69/57/7b/807ff961cbc747d66525c56387f307f114431cd8e733f30f5e2a7de7.jpg"
                                                 data-lazyload="https://statics.pancake.vn/web-media/ff/69/57/7b/807ff961cbc747d66525c56387f307f114431cd8e733f30f5e2a7de7.jpg"
                                                 class="">
@@ -80,7 +83,8 @@
                                     </div>
                                     <div class="product-content">
                                         <div class="product-name">
-                                            <a href="{{ route('categories.show', ['category' => 'so-mi']) }}" class="font-bold">Sơ
+                                            <a href="{{ route('categories.show', ['category' => 'so-mi']) }}"
+                                                class="font-bold">Sơ
                                                 mi</a>
                                         </div>
                                         <div class="product-name">
@@ -119,7 +123,7 @@
                                 </div>
                             </div>
 
-                            
+
                             <div class="feature-category group">
                                 <div class="product">
                                     <div class="product-image">
@@ -246,7 +250,11 @@
                 <section class="collection mt-12">
                     <div class="container">
                         <div class="collection-title">
-                            <a class="dash-collection color-unset" href="/san-pham-moi"><span>Sản phẩm mới</span></a>
+                            <a class="dash-collection " href="/san-pham-moi">
+                                <span>Sản phẩm mới</span>
+                            </a>
+                            <div class="line-text">
+                            </div>
                         </div>
                         <div class="owl-hot owl-carousel products owl-loaded owl-dra mt-10">
                             <div class="owl-stage-outer">
@@ -413,8 +421,10 @@
 
                 <section class="collection mt-10">
                     <div class="container">
-                        <div class="collection-title collection-title">
-                            <a class="dash-collection" href="/hot-sale"><span class="color-unset">Hot sale</span></a>
+                        <div class="collection-title">
+                            <a class="dash-collection" href="/hot-sale">Hot sale</a>
+                            <div class="line-text">
+                            </div>
                         </div>
                         <div class="owl-hot owl-carousel products owl-loaded owl-drag mt-10">
                             <div class="owl-stage-outer">
@@ -574,90 +584,110 @@
                     </div>
                 </section>
 
-                <section class="collection mt-12" id="seen-wrapper">
-                    <div class="container">
-                      <div class="collection-title">
-                        <a class="dash-collection"><span class="color-unset">Sản phẩm đã xem</span></a>
-                      </div>
-                      <div class="owl-seen owl-carousel products" id="seen-products">
-                        <div class="owl-stage-outer">
-                          <div class="owl-stage">
-                            <div class="owl-item">
-                              <div class="product">
-                                <div class="product-image">
-                                  <a class="product-image-img" href="/products/hoa-tiet-dua-cay">
-                                    <img data-lazyload="https://statics.pancake.vn/web-media/ce/d9/9f/3f/b512bffad256cf7dd53a26d39b5b2de5a3201fa3862bc03add152cff.jpg" class="lazy img-responsive center-block img-first" src="https://statics.pancake.vn/web-media/ce/d9/9f/3f/b512bffad256cf7dd53a26d39b5b2de5a3201fa3862bc03add152cff.jpg">
-                                    <img data-lazyload="https://statics.pancake.vn/web-media/f1/e7/db/49/0f95c2640f1af79d85fb2e0b0633ac1d08354e6573834b4f1591f8e6.jpg" class="lazy img-responsive center-block img-second" src="https://statics.pancake.vn/web-media/f1/e7/db/49/0f95c2640f1af79d85fb2e0b0633ac1d08354e6573834b4f1591f8e6.jpg">
-                                  </a>
-                                  <div class="img-wrapper">
-                                    <a href="/products/hoa-tiet-dua-cay" class="hover-img">
-                                      <span>Xem Ngay</span>
-                                    </a>
-                                  </div>
-                                </div>
-                                <div class="product-content">
-                                  <div class="product-name"><a href="/products/hoa-tiet-dua-cay">Họa tiết dừa cây</a></div>
-                                  <div class="price-sale-sale">
-                                    <div class="product-sale-original-price">350.000đ</div>
-                                    <div class="product-sale-price">250.000đ</div>
-                                  </div>
-                                </div>
-                                <span class="ribbon tag-sale">-29%</span>
-                              </div>
+                <section class="collection pt-10 pb-10" id="seen-wrapper">
+                    <div class="container ">
+                        <div class="collection-title ">
+                            <a class="dash-collection "><span class="color-unset">Sản
+                                    phẩm đã xem</span></a>
+                            <div class="line-text ">
                             </div>
-                            <div class="owl-item">
-                              <div class="product">
-                                <div class="product-image">
-                                  <a class="product-image-img" href="/products/ao-polo-len-tron">
-                                    <img data-lazyload="https://statics.pancake.vn/web-media/cd/9c/87/1c/859e82e0ba6fef503eec6823b6373e91e2694bed8287029276f1f257.jpg" class="lazy img-responsive center-block img-first" src="https://statics.pancake.vn/web-media/cd/9c/87/1c/859e82e0ba6fef503eec6823b6373e91e2694bed8287029276f1f257.jpg">
-                                    <img data-lazyload="https://statics.pancake.vn/web-media/0e/35/f6/e8/455f76fbe86df00caa5dbc26fa09c776f6e1414c8c79dbd3697b6d10.jpg" class="lazy img-responsive center-block img-second" src="https://statics.pancake.vn/web-media/0e/35/f6/e8/455f76fbe86df00caa5dbc26fa09c776f6e1414c8c79dbd3697b6d10.jpg">
-                                  </a>
-                                  <div class="img-wrapper">
-                                    <a href="/products/ao-polo-len-tron" class="hover-img">
-                                      <span>Xem Ngay</span>
-                                    </a>
-                                  </div>
-                                </div>
-                                <div class="product-content">
-                                  <div class="product-name"><a href="/products/ao-polo-len-tron">Áo polo len trơn</a></div>
-                                  <div class="price-sale-sale">
-                                    <div class="product-sale-original-price">350.000đ</div>
-                                    <div class="product-sale-price">299.000đ</div>
-                                  </div>
-                                </div>
-                                <span class="ribbon tag-sale">-15%</span>
-                              </div>
-                            </div>
-                            <div class="owl-item">
-                              <div class="product">
-                                <div class="product-image">
-                                  <a class="product-image-img" href="/products/so-mi-hoa-tiet-co-xanh">
-                                    <img data-lazyload="https://statics.pancake.vn/web-media/5c/ee/e6/c5/d2289add92807fef8ad2d0bfdf89cb169b77f4d5beffcb5e9f23b427.jpg" class="lazy img-responsive center-block img-first" src="https://statics.pancake.vn/web-media/5c/ee/e6/c5/d2289add92807fef8ad2d0bfdf89cb169b77f4d5beffcb5e9f23b427.jpg">
-                                    <img data-lazyload="https://statics.pancake.vn/web-media/c2/fd/88/f2/efa06b42c8483da7b0a2b2656bdd546870125cd6e13690dcac2d4629.jpg" class="lazy img-responsive center-block img-second" src="https://statics.pancake.vn/web-media/c2/fd/88/f2/efa06b42c8483da7b0a2b2656bdd546870125cd6e13690dcac2d4629.jpg">
-                                  </a>
-                                  <div class="img-wrapper">
-                                    <a href="/products/so-mi-hoa-tiet-co-xanh" class="hover-img">
-                                      <span>Xem Ngay</span>
-                                    </a>
-                                  </div>
-                                </div>
-                                <div class="product-content">
-                                  <div class="product-name"><a href="/products/so-mi-hoa-tiet-co-xanh">Sơ mi họa tiết cọ xanh</a></div>
-                                  <div class="price-sale-sale">
-                                    <div class="product-sale-original-price">280.000đ</div>
-                                    <div class="product-sale-price">199.000đ</div>
-                                  </div>
-                                </div>
-                                <span class="ribbon tag-sale">-29%</span>
-                              </div>
-                            </div>
-                          </div>
+
                         </div>
-                      </div>
+                        <div class="owl-seen owl-carousel products" id="seen-products">
+                            <div class="owl-stage-outer">
+                                <div class="owl-stage">
+                                    <div class="owl-item">
+                                        <div class="product">
+                                            <div class="product-image">
+                                                <a class="product-image-img" href="/products/hoa-tiet-dua-cay">
+                                                    <img data-lazyload="https://statics.pancake.vn/web-media/ce/d9/9f/3f/b512bffad256cf7dd53a26d39b5b2de5a3201fa3862bc03add152cff.jpg"
+                                                        class="lazy img-responsive center-block img-first"
+                                                        src="https://statics.pancake.vn/web-media/ce/d9/9f/3f/b512bffad256cf7dd53a26d39b5b2de5a3201fa3862bc03add152cff.jpg">
+                                                    <img data-lazyload="https://statics.pancake.vn/web-media/f1/e7/db/49/0f95c2640f1af79d85fb2e0b0633ac1d08354e6573834b4f1591f8e6.jpg"
+                                                        class="lazy img-responsive center-block img-second"
+                                                        src="https://statics.pancake.vn/web-media/f1/e7/db/49/0f95c2640f1af79d85fb2e0b0633ac1d08354e6573834b4f1591f8e6.jpg">
+                                                </a>
+                                                <div class="img-wrapper">
+                                                    <a href="/products/hoa-tiet-dua-cay" class="hover-img">
+                                                        <span>Xem Ngay</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-name"><a href="/products/hoa-tiet-dua-cay">Họa
+                                                        tiết dừa cây</a></div>
+                                                <div class="price-sale-sale">
+                                                    <div class="product-sale-original-price">350.000đ</div>
+                                                    <div class="product-sale-price">250.000đ</div>
+                                                </div>
+                                            </div>
+                                            <span class="ribbon tag-sale">-29%</span>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item">
+                                        <div class="product">
+                                            <div class="product-image">
+                                                <a class="product-image-img" href="/products/ao-polo-len-tron">
+                                                    <img data-lazyload="https://statics.pancake.vn/web-media/cd/9c/87/1c/859e82e0ba6fef503eec6823b6373e91e2694bed8287029276f1f257.jpg"
+                                                        class="lazy img-responsive center-block img-first"
+                                                        src="https://statics.pancake.vn/web-media/cd/9c/87/1c/859e82e0ba6fef503eec6823b6373e91e2694bed8287029276f1f257.jpg">
+                                                    <img data-lazyload="https://statics.pancake.vn/web-media/0e/35/f6/e8/455f76fbe86df00caa5dbc26fa09c776f6e1414c8c79dbd3697b6d10.jpg"
+                                                        class="lazy img-responsive center-block img-second"
+                                                        src="https://statics.pancake.vn/web-media/0e/35/f6/e8/455f76fbe86df00caa5dbc26fa09c776f6e1414c8c79dbd3697b6d10.jpg">
+                                                </a>
+                                                <div class="img-wrapper">
+                                                    <a href="/products/ao-polo-len-tron" class="hover-img">
+                                                        <span>Xem Ngay</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-name"><a href="/products/ao-polo-len-tron">Áo polo
+                                                        len trơn</a></div>
+                                                <div class="price-sale-sale">
+                                                    <div class="product-sale-original-price">350.000đ</div>
+                                                    <div class="product-sale-price">299.000đ</div>
+                                                </div>
+                                            </div>
+                                            <span class="ribbon tag-sale">-15%</span>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item">
+                                        <div class="product">
+                                            <div class="product-image">
+                                                <a class="product-image-img" href="/products/so-mi-hoa-tiet-co-xanh">
+                                                    <img data-lazyload="https://statics.pancake.vn/web-media/5c/ee/e6/c5/d2289add92807fef8ad2d0bfdf89cb169b77f4d5beffcb5e9f23b427.jpg"
+                                                        class="lazy img-responsive center-block img-first"
+                                                        src="https://statics.pancake.vn/web-media/5c/ee/e6/c5/d2289add92807fef8ad2d0bfdf89cb169b77f4d5beffcb5e9f23b427.jpg">
+                                                    <img data-lazyload="https://statics.pancake.vn/web-media/c2/fd/88/f2/efa06b42c8483da7b0a2b2656bdd546870125cd6e13690dcac2d4629.jpg"
+                                                        class="lazy img-responsive center-block img-second"
+                                                        src="https://statics.pancake.vn/web-media/c2/fd/88/f2/efa06b42c8483da7b0a2b2656bdd546870125cd6e13690dcac2d4629.jpg">
+                                                </a>
+                                                <div class="img-wrapper">
+                                                    <a href="/products/so-mi-hoa-tiet-co-xanh" class="hover-img">
+                                                        <span>Xem Ngay</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-name"><a
+                                                        href="/products/so-mi-hoa-tiet-co-xanh">Sơ mi họa tiết cọ
+                                                        xanh</a></div>
+                                                <div class="price-sale-sale">
+                                                    <div class="product-sale-original-price">280.000đ</div>
+                                                    <div class="product-sale-price">199.000đ</div>
+                                                </div>
+                                            </div>
+                                            <span class="ribbon tag-sale">-29%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </section>
-                  
-            
+                </section>
+
+
             </div>
         </div>
     </div>
@@ -672,7 +702,7 @@
                 dots: false,
                 items: 1, // Số lượng phần tử hiển thị trong một lần cuộn
                 autoplay: true, // Tự động cuộn
-                autoplayTimeout: 5000, // Thời gian chờ giữa các lần cuộn (ms)
+                autoplayTimeout: 3000, // Thời gian chờ giữa các lần cuộn (ms)
                 autoplayHoverPause: true, // Tạm dừng khi di chuột qua
                 navText: ["‹", "›"], // Nội dung của các nút "Previous" và "Next"
                 responsive: {

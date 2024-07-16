@@ -1,4 +1,5 @@
 <x-layout>
+
     <x-header>
         <a href="{{ route('home') }}"><b>Trang chủ</b></a> >
 
@@ -13,6 +14,7 @@
         @endphp
     </x-header>
     <div class="wrapper">
+
         <div class="category">
             <!-- Start category left -->
             <div class="category-left hidden-md" id="filters">
