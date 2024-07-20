@@ -1,12 +1,12 @@
-<head>
+{{-- <head>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
         rel="stylesheet" />
     @vite('public/build/css/tailwind.css')
     <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.5.x/dist/component.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
 </head>
-
-
+ --}}
+<x-admin-layout>
 <div x-data="setup()" x-init="$refs.loading.classList.add('hidden');
 setColors(color);" :class="{ 'dark': isDark }">
     <div class="flex h-screen antialiased text-gray-900 bg-gray-100 dark:bg-dark dark:text-light">
@@ -142,7 +142,7 @@ setColors(color);" :class="{ 'dark': isDark }">
                         <div role="menu" x-show="open" class="mt-2 space-y-2 px-7" aria-label="Dashboards">
                             <!-- active & hover classes 'text-gray-700 dark:text-light' -->
                             <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
-                            <a href="{{ route('admin') }}" role="menuitem"
+                            <a href="{{route('products.index')}}" role="menuitem"
                                 class="block p-2 text-sm text-gray-700 transition-colors duration-200 rounded-md dark:text-light dark:hover:text-light hover:text-gray-700">
                                 Danh sách sản phẩm
                             </a>
@@ -314,7 +314,7 @@ setColors(color);" :class="{ 'dark': isDark }">
                         <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Pages">
                             <!-- active & hover classes 'text-gray-700 dark:text-light' -->
                             <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
-                            <a href="{{route('pages.blank')}}" role="menuitem"
+                            <a href="" role="menuitem"
                             class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:text-gray-400 dark:hover:text-light hover:text-gray-700">
                             Blank
                          </a>
@@ -1652,7 +1652,7 @@ setColors(color);" :class="{ 'dark': isDark }">
         </section>
     </div>
 </div>
-
+</x-admin-layout>
 <!-- All javascript code in this project for now is just for demo DON'T RELY ON IT  -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.bundle.min.js"></script>
 @vite('public/build/js/script.js')

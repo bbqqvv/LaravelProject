@@ -12,18 +12,13 @@ class Product extends Model
     protected $fillable = [
         'name',
         'description',
-        'guarantee',
+        'warranty_policy',
+        'status',
+        'cost_origin',
+        'cost_sale',
         'price',
-        'category_id',
+        'quantity',
         'image',
         'stock',
     ];
-
-    /**
-     * Get the category that owns the product.
-     */
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
-    }
 }
