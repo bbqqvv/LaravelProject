@@ -12,16 +12,23 @@ class Product extends Model
     protected $fillable = [
         'name',
         'description',
-        'guarantee',
+        'warranty_policy',
+        'status',
+        'colors',
+        'sizes',
+        'cost_origin',
+        'sale',
         'price',
         'category_id',
-        'image',
+        'images',
         'stock',
     ];
 
-    /**
-     * Get the category that owns the product.
-     */
+    protected $casts = [
+        'images' => 'array', // Tự động chuyển đổi JSON sang mảng và ngược lại
+        'colors' => 'array',
+        'sizes' => 'array',
+    ];
     public function category()
     {
         return $this->belongsTo(Category::class);

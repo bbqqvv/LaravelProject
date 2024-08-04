@@ -12,21 +12,10 @@ class Category extends Model
     protected $fillable = [
         'name',
         'image',
-        'cost_origin',
-        'cost_sale',
-        'cost_sum',
-        'slug',
     ];
 
-    // Các tùy chọn khác cho model Category
-
-    /**
-     * Get the route key for the model.
-     *
-     * @return string
-     */
-    public function getRouteKeyName()
+    public function products()
     {
-        return 'slug'; // Đặt route key là slug để sử dụng URL thân thiện
+        return $this->hasMany(Product::class);
     }
 }

@@ -9,21 +9,15 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('image');
-            $table->string('cost_origin');
-            $table->string('cost_sale');
-            $table->string('cost_sum');
-            $table->string('slug')->unique(); // Thêm slug để tạo URL thân thiện
             $table->timestamps();
         });
     }
-
-
 
     /**
      * Reverse the migrations.
