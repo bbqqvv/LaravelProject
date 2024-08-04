@@ -18,17 +18,20 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->text('warranty_policy')->nullable();
+            $table->string('colors')->nullable(); 
+            $table->string('sizes')->nullable(); 
             $table->string('status');
-            $table->decimal('cost_origin', 8, 2);
-            $table->decimal('cost_sale', 8, 2);
+            $table->decimal('cost_origin', 8, 2)->nullable();
+            $table->decimal('sale', 8, 2)->nullable();
             $table->decimal('price', 8, 2);
-            $table->unsignedBigInteger('category_id');
-            $table->string('image')->nullable();
+            $table->unsignedBigInteger('category_id')->nullable(); // Cột khóa ngoại, có thể NULL
+            $table->json('images')->nullable(); // Lưu trữ hình ảnh dưới dạng JSON
             $table->integer('stock')->default(0);
             $table->timestamps();
 
-            // Define foreign key constraint
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            // Đặt khóa ngoại cho cột category_id
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null');
+        
         });
     }
 

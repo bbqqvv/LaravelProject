@@ -14,11 +14,23 @@ class Product extends Model
         'description',
         'warranty_policy',
         'status',
+        'colors',
+        'sizes',
         'cost_origin',
-        'cost_sale',
+        'sale',
         'price',
-        'quantity',
-        'image',
+        'category_id',
+        'images',
         'stock',
     ];
+
+    protected $casts = [
+        'images' => 'array', // Tự động chuyển đổi JSON sang mảng và ngược lại
+        'colors' => 'array',
+        'sizes' => 'array',
+    ];
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

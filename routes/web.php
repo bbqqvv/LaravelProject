@@ -26,7 +26,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/logout', [LoginUserController::class, 'logout'])->name('logout');
 
     Route::middleware('is-admin')->group(function () {
-        Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+        // Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
 
         Route::get('/admin/products', [AdminProductViewController::class, 'index'])->name('products.index');

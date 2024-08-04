@@ -201,12 +201,13 @@
                 <!-- Start Category Grid -->
                 <div class="category-grid ">
                     <!-- Product 1 -->
+
                     <div class="">
                         <div class="product">
                             <div class="product-image">
                                 <a href="{{ route('product.show', ['product' => 'name']) }}">
-                                    <img src="https://content.pancake.vn/1/s400x400/fe/44/5d/0d/ae785fa30b294b527e97c739fc992f5dc58fbcfa3286d01f33d8a938.jpg"
-                                        data-lazyload="https://content.pancake.vn/1/s400x400/fe/44/5d/0d/ae785fa30b294b527e97c739fc992f5dc58fbcfa3286d01f33d8a938.jpg"
+                                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lo8jp8vj0n0rfa"
+                                        data-lazyload="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lo8jp8vj0n0rfa"
                                         class="lozad img-responsive center-block img-first" alt="Product Image">
                                 </a>
                                 <div class="img-wrapper outstock">
@@ -217,7 +218,36 @@
                             </div>
                             <div class="product-content p-4">
                                 <div class="product-name">
-                                    <a href="/products/giay-derby">Giày Derby</a>
+                                    <a href="/products/giay-derby">Áo Khoác Dạ</a>
+                                </div>
+                                <div class="price-sale-sale mt-2">
+                                    <div class="product-sale-original-price">400.000đ</div>
+                                    <div class="product-sale-price">290.000đ</div>
+                                </div>
+                                <span
+                                    class="ribbon tag-sale bg-red-500 text-white px-2 py-1 rounded absolute top-0 left-0">-21%</span>
+                            </div>
+                        </div>
+                    </div>
+
+            
+                    <div class="">
+                        <div class="product">
+                            <div class="product-image">
+                                <a href="{{ route('product.show', ['product' => 'name']) }}">
+                                    <img src="https://vn-live-01.slatic.net/p/e6fd60fab11bbc490b2b9ee3e90c6ea3.jpg"
+                                        data-lazyload="https://vn-live-01.slatic.net/p/e6fd60fab11bbc490b2b9ee3e90c6ea3.jpg"
+                                        class="lozad img-responsive center-block img-first" alt="Product Image">
+                                </a>
+                                <div class="img-wrapper outstock">
+                                    <a href="/products/giay-derby" class="hover-img">
+                                        <span>Hết hàng</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-content p-4">
+                                <div class="product-name">
+                                    <a href="/products/giay-derby">Áo Khoác dạ</a>
                                 </div>
                                 <div class="price-sale-sale mt-2">
                                     <div class="product-sale-original-price">750.000đ</div>
@@ -229,6 +259,121 @@
                         </div>
                     </div>
 
+                                
+                    <div class="">
+                        <div class="product">
+                            <div class="product-image">
+                                <a href="{{ route('product.show', ['product' => 'name']) }}">
+                                    <img src="https://img.lazcdn.com/g/p/15978c93f9c35fe9e7074f2858cf03d8.jpg_720x720q80.jpg"
+                                        data-lazyload="https://img.lazcdn.com/g/p/15978c93f9c35fe9e7074f2858cf03d8.jpg_720x720q80.jpg"
+                                        class="lozad img-responsive center-block img-first" alt="Product Image">
+                                </a>
+                                <div class="img-wrapper outstock">
+                                    <a href="/products/giay-derby" class="hover-img">
+                                        <span>Hết hàng</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-content p-4">
+                                <div class="product-name">
+                                    <a href="/products/giay-derby">Áo Mangto</a>
+                                </div>
+                                <div class="price-sale-sale mt-2">
+                                    <div class="product-sale-original-price">1.050.000đ</div>
+                                    <div class="product-sale-price">590.000đ</div>
+                                </div>
+                                <span
+                                    class="ribbon tag-sale bg-red-500 text-white px-2 py-1 rounded absolute top-0 left-0">-21%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                                
+                    <div class="">
+                        <div class="product">
+                            <div class="product-image">
+                                <a href="{{ route('product.show', ['product' => 'name']) }}">
+                                    <img src="https://laz-img-sg.alicdn.com/p/16f056d971a49bbf536f71c61fa792af.jpg"
+                                        data-lazyload="https://laz-img-sg.alicdn.com/p/16f056d971a49bbf536f71c61fa792af.jpg"
+                                        class="lozad img-responsive center-block img-first" alt="Product Image">
+                                </a>
+                                <div class="img-wrapper outstock">
+                                    <a href="/products/giay-derby" class="hover-img">
+                                        <span>Hết hàng</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-content p-4">
+                                <div class="product-name">
+                                    <a href="/products/giay-derby">Áo sơ mi hoạc tiết đen trắng</a>
+                                </div>
+                                <div class="price-sale-sale mt-2">
+                                    <div class="product-sale-original-price">250.000đ</div>
+                                    <div class="product-sale-price">150.000đ</div>
+                                </div>
+                                <span
+                                    class="ribbon tag-sale bg-red-500 text-white px-2 py-1 rounded absolute top-0 left-0">-21%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                                
+                    <div class="">
+                        <div class="product">
+                            <div class="product-image">
+                                <a href="{{ route('product.show', ['product' => 'name']) }}">
+                                    <img src="https://vn-test-11.slatic.net/p/e6b05b4723dbba105d5421f14f09d812.jpg"
+                                        data-lazyload="https://vn-test-11.slatic.net/p/e6b05b4723dbba105d5421f14f09d812.jpg"
+                                        class="lozad img-responsive center-block img-first" alt="Product Image">
+                                </a>
+                                <div class="img-wrapper outstock">
+                                    <a href="/products/giay-derby" class="hover-img">
+                                        <span>Hết hàng</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-content p-4">
+                                <div class="product-name">
+                                    <a href="/products/giay-derby">Áo sơ mi Roway họa tiết</a>
+                                </div>
+                                <div class="price-sale-sale mt-2">
+                                    <div class="product-sale-original-price">250.000đ</div>
+                                    <div class="product-sale-price">190.000đ</div>
+                                </div>
+                                <span
+                                    class="ribbon tag-sale bg-red-500 text-white px-2 py-1 rounded absolute top-0 left-0">-21%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                                
+                    <div class="">
+                        <div class="product">
+                            <div class="product-image">
+                                <a href="{{ route('product.show', ['product' => 'name']) }}">
+                                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ls6pw0f9t4ex0e"
+                                        data-lazyload="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ls6pw0f9t4ex0e"
+                                        class="lozad img-responsive center-block img-first" alt="Product Image">
+                                </a>
+                                <div class="img-wrapper outstock">
+                                    <a href="/products/giay-derby" class="hover-img">
+                                        <span>Hết hàng</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-content p-4">
+                                <div class="product-name">
+                                    <a href="/products/giay-derby">Áo sơ mi Roway</a>
+                                </div>
+                                <div class="price-sale-sale mt-2">
+                                    <div class="product-sale-original-price">350.000đ</div>
+                                    <div class="product-sale-price">290.000đ</div>
+                                </div>
+                                <span
+                                    class="ribbon tag-sale bg-red-500 text-white px-2 py-1 rounded absolute top-0 left-0">-21%</span>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- End Category Grid -->
                     <div class="pagination" id="pagination-bottom">

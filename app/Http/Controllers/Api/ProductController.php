@@ -19,19 +19,23 @@ class ProductController extends Controller
             return response()->json(['message' => 'No record available'], 200);
         }
     }
-
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'description' => 'required',
+            'sizes' => 'required',
+            'colors' => 'required',
             'warranty_policy' => 'required',
             'cost_origin' => 'required|numeric',
-            'cost_sale' => 'required|numeric',
+            'sale' => 'required|numeric',
             'price' => 'required|numeric',
-            'quantity' => 'required',
-            'image' => 'required|image',
+            'images' => 'required|array',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'stock' => 'required|integer',
+            'category_id' => 'required|exists:categories,id', // Thêm dòng này vào để xác thực category_id
+            'status' => 'required|string',
+
         ]);
 
         if ($validator->fails()) {
@@ -40,14 +44,28 @@ class ProductController extends Controller
                 'errors' => $validator->messages()
             ], 422);
         }
+    
 
-        $product = Product::create($request->all());
+        $data = $request->all();
+
+        // Xử lý upload hình ảnh
+        if ($request->hasFile('images')) {
+            $images = [];
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('public/images');
+                $images[] = $path;
+            }
+            $data['images'] = json_encode($images); // Lưu đường dẫn hình ảnh dưới dạng JSON
+        }
+
+        $product = Product::create($data);
 
         return response()->json([
             'message' => 'Product Created Successfully',
             'data' => new ProductResource($product)
         ], 200);
     }
+
 
 
     public function show(Product $id)
@@ -63,13 +81,18 @@ class ProductController extends Controller
             'name' => 'required',
             'description' => 'required',
             'warranty_policy' => 'required',
+            'sizes' => 'required',
+            'colors' => 'required',
             'status' => 'required|integer',
             'cost_origin' => 'required|numeric',
-            'cost_sale' => 'required|numeric',
+            'sale' => 'required|numeric',
             'price' => 'required|numeric',
-            'quantity' => 'required',
-            'image' => 'required|image',
+            'images' => 'nullable|array',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'category_id' => 'required|exists:categories,id', // Thêm dòng này vào để xác thực category_id
+
             'stock' => 'required|integer',
+            
         ]);
 
         if ($validator->fails()) {
@@ -88,26 +111,27 @@ class ProductController extends Controller
             ], 404);
         }
 
-        // Cập nhật thông tin của sản phẩm
-        $product->update([
-            'name' => $request->name,
-            'description' => $request->description,
-            'warranty_policy' => $request->warranty_policy,
-            'status' => $request->status,
-            'cost_origin' => $request->cost_origin,
-            'cost_sale' => $request->cost_sale,
-            'price' => $request->price,
-            'quantity' => $request->quantity,
+        $data = $request->all();
 
-            'image' => $request->image,
-            'stock' => $request->stock,
-        ]);
+        // Xử lý upload hình ảnh
+        if ($request->hasFile('images')) {
+            $images = [];
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('public/images');
+                $images[] = $path;
+            }
+            $data['images'] = json_encode($images); // Cập nhật đường dẫn hình ảnh dưới dạng JSON
+        }
+
+        // Cập nhật thông tin của sản phẩm
+        $product->update($data);
 
         return response()->json([
-            'message' => 'Product Update Successfully',
+            'message' => 'Product Updated Successfully',
             'data' => new ProductResource($product)
         ], 200);
     }
+
 
     public function destroy($id)
     {
