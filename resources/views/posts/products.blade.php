@@ -52,29 +52,29 @@
                                     <div class="item">
                                         <div class="image-item">
                                             <img alt="Image 1" class="cloudzoom-gallery"
-                                                src="https://statics.pancake.vn/web-media/57/13/69/02/d3caf34bfb778fec405c39e4a883588589acc3bf8769d0d30caedd58.jpg"
-                                                data-large-src="https://statics.pancake.vn/web-media/57/13/69/02/d3caf34bfb778fec405c39e4a883588589acc3bf8769d0d30caedd58.jpg">
+                                                src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lu4gk494u68v58"
+                                                data-large-src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lu4gk494u68v58">
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="image-item">
                                             <img alt="Image 2" class="cloudzoom-gallery"
-                                                src="https://statics.pancake.vn/web-media/71/37/48/94/14ac19c5691f16ecbe01db44f09c1a774d257faf719d8af87b95d6b6.jpg"
-                                                data-large-src="https://statics.pancake.vn/web-media/71/37/48/94/14ac19c5691f16ecbe01db44f09c1a774d257faf719d8af87b95d6b6.jpg">
+                                                src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lu4gk494wzdr01"
+                                                data-large-src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lu4gk494wzdr01">
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="image-item">
                                             <img alt="Image 3" class="cloudzoom-gallery"
-                                                src="https://statics.pancake.vn/web-media/92/45/d5/02/6d65fcdef93c2f6170870e1911f77fc01c8f9706c492f1fa882521e2.jpg"
-                                                data-large-src="https://statics.pancake.vn/web-media/92/45/d5/02/6d65fcdef93c2f6170870e1911f77fc01c8f9706c492f1fa882521e2.jpg">
+                                                src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lu4gk494ydy76c"
+                                                data-large-src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lu4gk494ydy76c">
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="image-item">
                                             <img alt="Image 4" class="cloudzoom-gallery"
-                                                src="https://statics.pancake.vn/web-media/42/27/0b/24/18c82dca2649192f652f6b7cb5afd8cdcbe5c1d5806ed1c6d832b5c3.jpg"
-                                                data-large-src="https://statics.pancake.vn/web-media/42/27/0b/24/18c82dca2649192f652f6b7cb5afd8cdcbe5c1d5806ed1c6d832b5c3.jpg">
+                                                src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lu4gk494vktbc1"
+                                                data-large-src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lu4gk494vktbc1">
                                         </div>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@
                                     <div class="item">
                                         <div class="big-image">
                                             <img id="large-image-display"
-                                                src="https://statics.pancake.vn/web-media/57/13/69/02/d3caf34bfb778fec405c39e4a883588589acc3bf8769d0d30caedd58.jpg">
+                                                src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lu4gk494u68v58">
                                             <span class="ribbon tag-sale z-0">-21%</span>
                                         </div>
                                     </div>
@@ -126,15 +126,13 @@
 
                         <div class="w-1/2 product-right">
                             <div class="product-name-detail">
-                                <h2 class="uppercase product-name-product font-barlow font-semibold text-2xl">Sơ mi họa
-                                    tiết hoa cúc</h2>
+                                <h2 class="uppercase product-name-product font-barlow font-semibold text-2xl">Ao Polo Nam Roway Dệt Len</h2>
                                 <div class="title-product-detail">Mã sản phẩm: <span class="color-primary font-semibold"
-                                        id="sku">hoacuc1</span></div>
+                                        id="sku">polo</span></div>
                                 <!--<div class="color-primary fw-600 fs-20 pdtb-12">Giá: 199.000</div>-->
 
                                 <div class="price-product-sale-sale flex space-x-3">
-                                    <div
-                                        class="product-sale-original-price text-2xl font-barlow text-colorText">
+                                    <div class="product-sale-original-price text-2xl font-barlow text-colorText">
                                         280.000đ</div>
                                     <div class="product-product-sale-price text-[#5986BD] text-2xl font-semibold">
                                         199.000đ</div>
@@ -154,7 +152,7 @@
                                         id="3f1c42bb-9b68-4847-b202-d13cf247ae69">
                                         <div class="title-attributes">Màu sắc:</div>
                                         <div class="values-attributes flex space-x-2 text-center">
-                                            <div class="valueChild active" data-attributes="Màu sắc" data-value="Đen"
+                                            {{-- <div class="valueChild active" data-attributes="Màu sắc" data-value="Đen"
                                                 onclick="handleColorClick(this)">Đen</div>
                                             <div class="valueChild" data-attributes="Màu sắc" data-value="Trắng"
                                                 onclick="handleColorClick(this)">Trắng</div>
@@ -165,7 +163,7 @@
                                             <div class="valueChild" data-attributes="Màu sắc" data-value="Xanh"
                                                 onclick="handleColorClick(this)">Xanh</div>
                                             <div class="valueChild" data-attributes="Màu sắc" data-value="Cam Đất"
-                                                onclick="handleColorClick(this)">Cam Đất</div>
+                                                onclick="handleColorClick(this)">Cam Đất</div> --}}
                                         </div>
                                     </div>
 
@@ -251,7 +249,7 @@
                                     type="submit" name="checkout">
                                     <i class="fa fa-shopping-cart " aria-hidden="true"></i> Mua ngay
                                 </button>
-                                    @include('partials._add_to_cart')
+                                @include('partials._add_to_cart')
                                 {{-- <button type="submit" name="submit" id="add-to-cart"
                                     class="default-btn btn-primary font-bold bg-[#1D2C3F] text-white w-[40%] h-[2rem] rounded-md">
                                     <i class="fa fa-shopping-bag " aria-hidden="true"></i> Thêm vào giỏ

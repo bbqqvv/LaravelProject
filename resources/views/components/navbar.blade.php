@@ -1,7 +1,5 @@
-
-
 <header class="bg-white shadow h-auto max-w-full sticky z-20 top-0">
-    
+
     <div class="wrapper">
         <!-- Hotline -->
         <div class="top-bar flex justify-between p-1 flex-1/2">
@@ -75,16 +73,46 @@
             <div class="nav-b-right flex items-center space-x-5">
                 {{-- Giỏ hàng --}}
                 @auth
-                    <div class="account-box flex flex-col items-center">
-                        <a href="#" class="text-black flex flex-col items-center open-cart">
-                            <i class="fa-solid fa-user "></i>
+                    <div class="relative account-box flex flex-col items-center">
+                        <button onclick="toggleDropdown()"
+                            class="text-black flex flex-col items-center open-cart focus:outline-none">
+                            <i class="fa-solid fa-user"></i>
                             <span class="text-[0.8rem] text-red-600 font-semibold">{{ Auth::user()->name }}</span>
-                        </a>
+                        </button>
+                        <div id="accountDropdown"
+                            class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden">
+                            <a href="{{ route('account.show') }}"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Quản lý tài khoản</a>
+                            <a href="/orders" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Quản lý đơn
+                                hàng</a>
+                            <a href="/logout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Đăng xuất</a>
+                        </div>
                     </div>
                 @endauth
             </div>
         </div>
     </div>
+
+    <script>
+        function toggleDropdown() {
+            document.getElementById('accountDropdown').classList.toggle('hidden');
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.open-cart')) {
+                const dropdowns = document.getElementsByClassName("accountDropdown");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (!openDropdown.classList.contains('hidden')) {
+                        openDropdown.classList.add('hidden');
+                    }
+                }
+            }
+        }
+    </script>
+
+
     <div id="mobile-menu" class="hidden md:hidden">
         <div class="flex flex-col space-y-3 p-4">
             <a href="/customer/login" class="text-black flex items-center text-sm font-medium">

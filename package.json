@@ -19,6 +19,8 @@
     },
     "dependencies": {
         "apexcharts": "^3.50.0",
+        "jquery": "^3.7.1",
+        "owl.carousel": "^2.3.4",
         "quill": "^2.0.2",
         "quill-image-resize": "^3.0.9",
         "react-quill": "^2.0.0"

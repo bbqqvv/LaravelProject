@@ -14,11 +14,12 @@ class ProductController extends Controller
     {
         $products = Product::all();
         if ($products->count() > 0) {
-            return ProductResource::collection($products);
+            return response()->json(['products' => ProductResource::collection($products)]);
         } else {
             return response()->json(['message' => 'No record available'], 200);
         }
     }
+
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -28,7 +29,6 @@ class ProductController extends Controller
             'colors' => 'required',
             'warranty_policy' => 'required',
             'cost_origin' => 'required|numeric',
-            'sale' => 'required|numeric',
             'price' => 'required|numeric',
             'images' => 'required|array',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -44,9 +44,11 @@ class ProductController extends Controller
                 'errors' => $validator->messages()
             ], 422);
         }
-    
+
 
         $data = $request->all();
+        $data['slug'] = \Illuminate\Support\Str::slug($request->name);
+
 
         // Xử lý upload hình ảnh
         if ($request->hasFile('images')) {
@@ -62,7 +64,7 @@ class ProductController extends Controller
 
         return response()->json([
             'message' => 'Product Created Successfully',
-            'data' => new ProductResource($product)
+            'product' => new ProductResource($product)
         ], 200);
     }
 
@@ -83,16 +85,15 @@ class ProductController extends Controller
             'warranty_policy' => 'required',
             'sizes' => 'required',
             'colors' => 'required',
-            'status' => 'required|integer',
+            'status' => 'required|string',
             'cost_origin' => 'required|numeric',
-            'sale' => 'required|numeric',
             'price' => 'required|numeric',
             'images' => 'nullable|array',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'category_id' => 'required|exists:categories,id', // Thêm dòng này vào để xác thực category_id
 
             'stock' => 'required|integer',
-            
+
         ]);
 
         if ($validator->fails()) {
@@ -105,6 +106,7 @@ class ProductController extends Controller
         // Lấy đối tượng Product từ cơ sở dữ liệu
         $product = Product::find($id);
 
+
         if (!$product) {
             return response()->json([
                 'message' => 'Product not found'
@@ -112,6 +114,7 @@ class ProductController extends Controller
         }
 
         $data = $request->all();
+        $data['slug'] = \Illuminate\Support\Str::slug($request->name);
 
         // Xử lý upload hình ảnh
         if ($request->hasFile('images')) {
@@ -128,7 +131,7 @@ class ProductController extends Controller
 
         return response()->json([
             'message' => 'Product Updated Successfully',
-            'data' => new ProductResource($product)
+            'product' => new ProductResource($product)
         ], 200);
     }
 
