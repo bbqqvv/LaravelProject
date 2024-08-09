@@ -16,18 +16,6 @@
     </x-header>
     <div class="wrapper">
         <div class="container">
-
-            {{-- <!-- Start breadcrumb -->
-            <div class="breadcrumb">
-                <div class="wrapper">
-                    <ul class="breadcrumb-ul">
-                        <li><a href="/">Trang chủ</a><span><i class="fa fa-angle-right"></i></span></li>
-                        <li><a href="/collections/all">Sản phẩm</a><span><i class="fa fa-angle-right"></i></span></li>
-                        <li><a class="active" href="/products/so-mi-hoa-tiet-hoa-cuc">Sơ mi họa tiết hoa cúc</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- End breadcrumb --> --}}
             <form action="/add-cart" enctype="multipart/form-data" method="post" accept-charset="UTF-8">
                 <input type="hidden" name="_csrf_token" value="fAwsMBotAzM0MzQyBAAnECocQw0lBy9_2fFqOCsjNdLbSElZyp-A_jpK">
                 <input type="hidden" name="utf8" value="✓">
@@ -37,93 +25,98 @@
 
                         <div class="w-1/2">
                             <div class="product-images flex">
-                                <!-- Các nút điều hướng -->
-                                {{-- <span class="owl-carousel-nav owl-carousel-prev" id="button-slider-left">
-                                    <img src="https://statics.pancake.vn/web-icons/53/9d/00/22/298186597ece64c5e7a1790745bff003b927b4f19aff0af8919eba10.svg"
-                                        width="20" height="30">
-                                </span>
-                                <span class="owl-carousel-nav owl-carousel-next" id="button-slider-right">
-                                    <img src="https://statics.pancake.vn/web-icons/53/9d/00/22/298186597ece64c5e7a1790745bff003b927b4f19aff0af8919eba10.svg"
-                                        width="20" height="30">
-                                </span> --}}
-
-                                <!-- Owl Carousel cho hình ảnh nhỏ -->
                                 <div class="vertical-slider w-1/4">
-                                    <div class="item">
-                                        <div class="image-item">
-                                            <img alt="Image 1" class="cloudzoom-gallery"
-                                                src="https://statics.pancake.vn/web-media/57/13/69/02/d3caf34bfb778fec405c39e4a883588589acc3bf8769d0d30caedd58.jpg"
-                                                data-large-src="https://statics.pancake.vn/web-media/57/13/69/02/d3caf34bfb778fec405c39e4a883588589acc3bf8769d0d30caedd58.jpg">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="image-item">
-                                            <img alt="Image 2" class="cloudzoom-gallery"
-                                                src="https://statics.pancake.vn/web-media/71/37/48/94/14ac19c5691f16ecbe01db44f09c1a774d257faf719d8af87b95d6b6.jpg"
-                                                data-large-src="https://statics.pancake.vn/web-media/71/37/48/94/14ac19c5691f16ecbe01db44f09c1a774d257faf719d8af87b95d6b6.jpg">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="image-item">
-                                            <img alt="Image 3" class="cloudzoom-gallery"
-                                                src="https://statics.pancake.vn/web-media/92/45/d5/02/6d65fcdef93c2f6170870e1911f77fc01c8f9706c492f1fa882521e2.jpg"
-                                                data-large-src="https://statics.pancake.vn/web-media/92/45/d5/02/6d65fcdef93c2f6170870e1911f77fc01c8f9706c492f1fa882521e2.jpg">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="image-item">
-                                            <img alt="Image 4" class="cloudzoom-gallery"
-                                                src="https://statics.pancake.vn/web-media/42/27/0b/24/18c82dca2649192f652f6b7cb5afd8cdcbe5c1d5806ed1c6d832b5c3.jpg"
-                                                data-large-src="https://statics.pancake.vn/web-media/42/27/0b/24/18c82dca2649192f652f6b7cb5afd8cdcbe5c1d5806ed1c6d832b5c3.jpg">
-                                        </div>
-                                    </div>
+                                    <!-- Thumbnails sẽ được chèn vào đây -->
                                 </div>
 
                                 <!-- Phần hiển thị hình ảnh lớn -->
                                 <div class="image-list-big relative w-3/4 cloud-zoom">
                                     <div class="item">
                                         <div class="big-image">
-                                            <img id="large-image-display"
-                                                src="https://statics.pancake.vn/web-media/57/13/69/02/d3caf34bfb778fec405c39e4a883588589acc3bf8769d0d30caedd58.jpg">
-                                            <span class="ribbon tag-sale z-0">-21%</span>
+                                            <img id="large-image-display" src="" alt="Large Image">
+                                            <span class="ribbon tag-sale z-0" id="discount-tag"></span>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
 
                         <style>
-
+                            /* Add your custom styles here */
                         </style>
+
                         <script>
                             $(document).ready(function() {
-                                $('.vertical-slider').slick({
-                                    vertical: true,
-                                    slidesToShow: 3,
-                                    slidesToScroll: 1,
-                                    arrows: true,
-                                    infinite: true,
-                                    prevArrow: "<button type='button' class='slick-prev'><img src='https://statics.pancake.vn/web-icons/53/9d/00/22/298186597ece64c5e7a1790745bff003b927b4f19aff0af8919eba10.svg' width='20' height='30'></button>",
-                                    // nextArrow: "<button type='button' class='slick-next'><img src='https://statics.pancake.vn/web-icons/53/9d/00/22/298186597ece64c5e7a1790745bff003b927b4f19aff0af8919eba10.svg' width='20' height='30'></button>"
-                                });
+                                // Gửi yêu cầu API để lấy dữ liệu sản phẩm
+                                $.ajax({
+                                    url: `/api/products`,
+                                    method: 'GET',
+                                    success: function(response) {
+                                        // Giả sử response chứa danh sách sản phẩm
+                                        var products = response.products; // Điều chỉnh theo cấu trúc dữ liệu của bạn
 
-                                // Update large image on slider change
-                                $('.vertical-slider').on('afterChange', function(event, slick, currentSlide) {
-                                    var largeSrc = $('.vertical-slider .slick-current img').data('large-src');
-                                    $('#large-image-display').attr('src', largeSrc);
-                                });
+                                        // Cập nhật ảnh lớn đầu tiên và gắn thẻ giảm giá
+                                        if (products.length > 0) {
+                                            var firstProduct = products[0];
+                                            var images = JSON.parse(firstProduct
+                                            .images); // Chuyển đổi chuỗi JSON thành mảng
+                                            var imageUrls = images.map(img =>
+                                                `http://127.0.0.1:8000/storage/${img.replace('public/', '')}`);
+                                            $('#large-image-display').attr('src', imageUrls[0]);
+                                            $('#discount-tag').text(firstProduct.sale ? `-${firstProduct.sale}%` : '');
+                                        }
 
-                                // Update large image on thumbnail click
-                                $('.vertical-slider .image-item img').on('click', function() {
-                                    var largeSrc = $(this).data('large-src');
-                                    $('#large-image-display').attr('src', largeSrc);
+                                        // Tạo HTML cho các ảnh nhỏ
+                                        var thumbnailsHtml = '';
+                                        products.forEach(function(product) {
+                                            var images = JSON.parse(product
+                                            .images); // Chuyển đổi chuỗi JSON thành mảng
+                                            var imageUrls = images.map(img =>
+                                                `http://127.0.0.1:8000/storage/${img.replace('public/', '')}`);
+                                            imageUrls.forEach(function(image) {
+                                                thumbnailsHtml += `
+                                                    <div class="item">
+                                                        <div class="image-item">
+                                                            <img alt="${product.name}" class="cloudzoom-gallery"
+                                                                src="${image}"
+                                                                data-large-src="${image}">
+                                                        </div>
+                                                    </div>
+                                                `;
+                                            });
+                                        });
+                                        $('.vertical-slider').html(thumbnailsHtml);
+
+                                        // Khởi tạo slider
+                                        $('.vertical-slider').slick({
+                                            vertical: true,
+                                            slidesToShow: 3,
+                                            slidesToScroll: 1,
+                                            arrows: true,
+                                            infinite: true,
+                                            prevArrow: "<button type='button' class='slick-prev'><img src='https://statics.pancake.vn/web-icons/53/9d/00/22/298186597ece64c5e7a1790745bff003b927b4f19aff0af8919eba10.svg' width='20' height='30'></button>",
+                                            nextArrow: "<button type='button' class='slick-next'><img src='https://statics.pancake.vn/web-icons/53/9d/00/22/298186597ece64c5e7a1790745bff003b927b4f19aff0af8919eba10.svg' width='20' height='30'></button>"
+                                        });
+
+                                        // Cập nhật ảnh lớn khi thay đổi slide
+                                        $('.vertical-slider').on('afterChange', function(event, slick, currentSlide) {
+                                            var largeSrc = $('.vertical-slider .slick-current img').data(
+                                                'large-src');
+                                            $('#large-image-display').attr('src', largeSrc);
+                                        });
+
+                                        // Cập nhật ảnh lớn khi nhấp vào thumbnail
+                                        $('.vertical-slider .image-item img').on('click', function() {
+                                            var largeSrc = $(this).data('large-src');
+                                            $('#large-image-display').attr('src', largeSrc);
+                                        });
+                                    },
+                                    error: function(error) {
+                                        console.error('Error fetching products:', error);
+                                    }
                                 });
                             });
                         </script>
-
-
-
                         <div class="w-1/2 product-right">
                             <div class="product-name-detail">
                                 <h2 class="uppercase product-name-product font-barlow font-semibold text-2xl">Sơ mi họa
@@ -133,8 +126,7 @@
                                 <!--<div class="color-primary fw-600 fs-20 pdtb-12">Giá: 199.000</div>-->
 
                                 <div class="price-product-sale-sale flex space-x-3">
-                                    <div
-                                        class="product-sale-original-price text-2xl font-barlow text-colorText">
+                                    <div class="product-sale-original-price text-2xl font-barlow text-colorText">
                                         280.000đ</div>
                                     <div class="product-product-sale-price text-[#5986BD] text-2xl font-semibold">
                                         199.000đ</div>
@@ -251,7 +243,7 @@
                                     type="submit" name="checkout">
                                     <i class="fa fa-shopping-cart " aria-hidden="true"></i> Mua ngay
                                 </button>
-                                    @include('partials._add_to_cart')
+                                @include('partials._add_to_cart')
                                 {{-- <button type="submit" name="submit" id="add-to-cart"
                                     class="default-btn btn-primary font-bold bg-[#1D2C3F] text-white w-[40%] h-[2rem] rounded-md">
                                     <i class="fa fa-shopping-bag " aria-hidden="true"></i> Thêm vào giỏ
@@ -303,71 +295,18 @@
 
                             <div class="additional-info mt-5 tab-content pb-10" id="tab-1">
                                 <div class="rte space-y-5">
-                                    <p class="irIKAp font-semibold">Chi tiết áo sơ mi Roway</p>
-                                    <p class="irIKAp">- Chất vải: Lụa pha thoáng mát, mềm mịn</p>
-                                    <p class="irIKAp">- Phom áo: Suông che khuyết điểm tốt và dễ dàng hoạt động</p>
-                                    <p class="irIKAp">- Hoàn thiện: tỉ mỉ cao</p>
-                                    <p class="irIKAp">&nbsp;</p>
-                                    <p class="irIKAp font-semibold">Cách chọn size: Bạn nên Inbox, cung cấp chiều cao,
-                                        cân nặng để shop tư vấn size chuẩn nhất</p>
-                                    <p class="irIKAp font-semibold">- Bảng size mẫu Roway</p>
-                                    <div class="irIKAp">
-                                        <div>
-                                            <div class="cxDtMn"><img class="_0O7Vlf bgImIg"
-                                                    src="https://down-vn.img.susercontent.com/file/7bdcd9ed78181eba25b96371424cf228"
-                                                    width="invalid-value" height="invalid-value"></div>
-                                        </div>
-                                    </div>
-                                    <p class="irIKAp">&nbsp;</p>
-                                    <p class="irIKAp font-semibold">Sản phẩm được đóng 2 lớp hộp để chống móp méo khi
-                                        vận chuyển</p>
-                                    <p class="irIKAp font-semibold">Là khách hàng Roway, chúng tôi cam kết bạn sẽ được:
-                                    </p>
-                                    <p class="irIKAp">1. Sản phẩm giống mô tả và hình ảnh thật 100% của Shop giữ bản
-                                        quyền hình ảnh.</p>
-                                    <p class="irIKAp">2. Đảm bảo vải chất lượng sản phẩm 100%</p>
-                                    <p class="irIKAp">3. Cam kết được đổi trả hàng trong vòng 30 ngày.</p>
-                                    <p class="irIKAp">4. Hoàn tiền nếu sản phẩm không giống với mô tả</p>
-                                    <p class="irIKAp">+ Hàng phải còn mới đầy đủ tem mác và chưa qua sử dụng</p>
-                                    <p class="irIKAp">+ Sản phẩm bị lỗi do vận chuyển và do nhà sản xuất</p>
-                                    <p class="irIKAp">𝑯𝒖̛𝒐̛́𝒏𝒈 𝒅𝒂̂̃𝒏 𝒔𝒖̛̉ 𝒅𝒖̣𝒏𝒈 𝒔𝒂̉𝒏 𝒑𝒉𝒂̂̉𝒎 𝑨́𝒐
-                                        𝑹𝒐𝒘𝒂𝒚</p>
-                                    <p class="irIKAp">- Giặt ở nhiệt độ bình thường</p>
-                                    <p class="irIKAp">- Không được dùng hóa chất tẩy.</p>
-                                    <p class="irIKAp">Do màn hình và điều kiện ánh sáng khác nhau, màu sắc thực tế của
-                                        sản phẩm có thể chênh lệch khoảng 3-5%</p>
+                                    {{-- Nội dung mô tả sẽ ở đây --}}
                                 </div>
                             </div>
 
                             <div class="comment mt-5 tab-content hidden pt-2 pb-10" id="tab-2">
                                 <div class="page-content  space-y-5">
-                                    <p class="p1 font-semibold">Những sản phẩm được đổi khi đảm bảo các điều kiện sau:
-                                    </p>
-                                    <p class="p1">-&nbsp;&nbsp; Thời gian đổi sản phẩm trong vòng 03 ngày (kể từ
-                                        ngày xuất bán đối với mua trực tiếp hoặc kể từ ngày nhận được sản phẩm đối với
-                                        mua hàng qua mạng)</p>
-                                    <p class="p1">-&nbsp;&nbsp; Sản phẩm phải nguyên vẹn, còn nguyên tem mác như
-                                        khi shop bàn giao.</p>
-                                    <p class="p1">-&nbsp;&nbsp; Sản phẩm đổi phải ngang giá hoặc lớn hơn so với sản
-                                        phẩm trả.</p>
-                                    <p class="p1">-&nbsp;&nbsp; Tất cả các chi phí phát sinh khi đổi trả khách hàng
-                                        phải chịu 100%.</p>
-                                    <p class="p1">Những trường hợp được bảo hành, sửa chữa không tính phí:</p>
-                                    <p class="p1">- Đối với các sản phẩm quần âu, áo sơ mi do shop sản xuất, khách
-                                        hàng có nhu cầu lên gấu, bóp eo chỉnh sửa form dáng áo ,quần....</p>
-                                    <p class="p1">- Đối với sản phẩm giày da, thắt lưng shop hiện không nhận bảo
-                                        hành</p>
-                                    <p class="p1">Những trường hợp bảo hành có tính phí:</p>
-                                    <p class="p1">- Đối với các sản phẩm quần, áo mà khách hàng trong quá trình sử
-                                        dụng bị rách, hỏng và có nhu cầu sửa chữa, cũng như shop có khả năng sửa chữa
-                                        được.</p>
+                                    {{-- Nội dung bảo hành ở đây --}}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
 
                 <script>
                     document.addEventListener("DOMContentLoaded", () => {

@@ -205,8 +205,8 @@
                     <div class="">
                         <div class="product">
                             <div class="product-image">
-                                <a href="{{ route('product.show', ['product' => 'name']) }}">
-                                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lo8jp8vj0n0rfa"
+                                <a href="{{ route('product.show') }}">
+                                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lu4gk494u68v58"
                                         data-lazyload="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lo8jp8vj0n0rfa"
                                         class="lozad img-responsive center-block img-first" alt="Product Image">
                                 </a>
@@ -218,7 +218,7 @@
                             </div>
                             <div class="product-content p-4">
                                 <div class="product-name">
-                                    <a href="/products/giay-derby">Áo Khoác Dạ</a>
+                                    <a href="">Áo Polo nam ROWAY dệt len </a>
                                 </div>
                                 <div class="price-sale-sale mt-2">
                                     <div class="product-sale-original-price">400.000đ</div>
@@ -230,12 +230,12 @@
                         </div>
                     </div>
 
-            
+
                     <div class="">
                         <div class="product">
                             <div class="product-image">
-                                <a href="{{ route('product.show', ['product' => 'name']) }}">
-                                    <img src="https://vn-live-01.slatic.net/p/e6fd60fab11bbc490b2b9ee3e90c6ea3.jpg"
+                                <a href="">
+                                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lrrbcs8xmzyx13"
                                         data-lazyload="https://vn-live-01.slatic.net/p/e6fd60fab11bbc490b2b9ee3e90c6ea3.jpg"
                                         class="lozad img-responsive center-block img-first" alt="Product Image">
                                 </a>
@@ -247,7 +247,7 @@
                             </div>
                             <div class="product-content p-4">
                                 <div class="product-name">
-                                    <a href="/products/giay-derby">Áo Khoác dạ</a>
+                                    <a href="/products/giay-derby">Polo len kẻ ngang</a>
                                 </div>
                                 <div class="price-sale-sale mt-2">
                                     <div class="product-sale-original-price">750.000đ</div>
@@ -259,12 +259,12 @@
                         </div>
                     </div>
 
-                                
+
                     <div class="">
                         <div class="product">
                             <div class="product-image">
-                                <a href="{{ route('product.show', ['product' => 'name']) }}">
-                                    <img src="https://img.lazcdn.com/g/p/15978c93f9c35fe9e7074f2858cf03d8.jpg_720x720q80.jpg"
+                                <a href="">
+                                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lu4gk494ojz3ac"
                                         data-lazyload="https://img.lazcdn.com/g/p/15978c93f9c35fe9e7074f2858cf03d8.jpg_720x720q80.jpg"
                                         class="lozad img-responsive center-block img-first" alt="Product Image">
                                 </a>
@@ -276,7 +276,7 @@
                             </div>
                             <div class="product-content p-4">
                                 <div class="product-name">
-                                    <a href="/products/giay-derby">Áo Mangto</a>
+                                    <a href="/products/giay-derby">Polo len Monogram</a>
                                 </div>
                                 <div class="price-sale-sale mt-2">
                                     <div class="product-sale-original-price">1.050.000đ</div>
@@ -288,12 +288,12 @@
                         </div>
                     </div>
 
-                                
+
                     <div class="">
                         <div class="product">
                             <div class="product-image">
-                                <a href="{{ route('product.show', ['product' => 'name']) }}">
-                                    <img src="https://laz-img-sg.alicdn.com/p/16f056d971a49bbf536f71c61fa792af.jpg"
+                                <a href="">
+                                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltqfa6cb0qh668"
                                         data-lazyload="https://laz-img-sg.alicdn.com/p/16f056d971a49bbf536f71c61fa792af.jpg"
                                         class="lozad img-responsive center-block img-first" alt="Product Image">
                                 </a>
@@ -305,7 +305,7 @@
                             </div>
                             <div class="product-content p-4">
                                 <div class="product-name">
-                                    <a href="/products/giay-derby">Áo sơ mi hoạc tiết đen trắng</a>
+                                    <a href="/products/giay-derby">Áo thun polo nam ROWAY</a>
                                 </div>
                                 <div class="price-sale-sale mt-2">
                                     <div class="product-sale-original-price">250.000đ</div>
@@ -317,12 +317,12 @@
                         </div>
                     </div>
 
-                                
+
                     <div class="">
                         <div class="product">
                             <div class="product-image">
-                                <a href="{{ route('product.show', ['product' => 'name']) }}">
-                                    <img src="https://vn-test-11.slatic.net/p/e6b05b4723dbba105d5421f14f09d812.jpg"
+                                <a href="">
+                                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lk5p1lqc1qyc97"
                                         data-lazyload="https://vn-test-11.slatic.net/p/e6b05b4723dbba105d5421f14f09d812.jpg"
                                         class="lozad img-responsive center-block img-first" alt="Product Image">
                                 </a>
@@ -334,7 +334,7 @@
                             </div>
                             <div class="product-content p-4">
                                 <div class="product-name">
-                                    <a href="/products/giay-derby">Áo sơ mi Roway họa tiết</a>
+                                    <a href="/products/giay-derby">Polo trắng cổ đen</a>
                                 </div>
                                 <div class="price-sale-sale mt-2">
                                     <div class="product-sale-original-price">250.000đ</div>
@@ -346,12 +346,12 @@
                         </div>
                     </div>
 
-                                
+
                     <div class="">
                         <div class="product">
                             <div class="product-image">
-                                <a href="{{ route('product.show', ['product' => 'name']) }}">
-                                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ls6pw0f9t4ex0e"
+                                <a href="">
+                                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltvr4052c07h04"
                                         data-lazyload="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ls6pw0f9t4ex0e"
                                         class="lozad img-responsive center-block img-first" alt="Product Image">
                                 </a>
@@ -363,7 +363,7 @@
                             </div>
                             <div class="product-content p-4">
                                 <div class="product-name">
-                                    <a href="/products/giay-derby">Áo sơ mi Roway</a>
+                                    <a href="/products/giay-derby">Polo len dệt thoi</a>
                                 </div>
                                 <div class="price-sale-sale mt-2">
                                     <div class="product-sale-original-price">350.000đ</div>

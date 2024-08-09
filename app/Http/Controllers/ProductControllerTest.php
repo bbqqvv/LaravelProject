@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ListCategoriesController extends Controller
+class ProductControllerTest extends Controller
 {
+    //
     public function show()
     {
-        return view('posts.show');
+        return view('posts.products');
     }
 }

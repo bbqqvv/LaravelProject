@@ -25,8 +25,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <!-- Include CloudZoom -->
-    <script type="text/javascript" src="cloud-zoom.js"></script>
-    <link rel="stylesheet" href="cloud-zoom.css" type="text/css">
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
